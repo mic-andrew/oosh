@@ -1,9 +1,19 @@
+import { useStoreActions, useStoreState } from "easy-peasy";
 import { useState } from "react";
 import dp from "../../assets/dp.png";
 
 export const CreatePost = (props) => {
   let { showCreatePost } = props;
   const [image, setImage] = useState(null);
+  const [postTitle, setPostTitle] = useState("");
+
+  const todos = useStoreState((state) => state.post);
+  const addTodo = useStoreActions((actions) => actions.addPost);
+
+  const createPost = () => {
+    addTodo({ title: "this is a new title", body: image });
+
+  };
 
   const handleImageSelect = (e) => {
     if (e.target.files != null && e.target.files.length > 0) {
@@ -18,6 +28,7 @@ export const CreatePost = (props) => {
   return (
     <>
       <div className="absolute top-0 left-0">
+        {console.log(todos)}
         <div className="inset-0 fixed bg-slate-800 w-screen z-50 h-[100vh] bg-opacity-60 flex items-center px-3">
           <div className="shadow shadow-slate-400 rounded-lg space-y-4 bg-white mx-auto w-full lg:w-2/3 2xl:w-1/2 ">
             <div className="flex justify-between items-center  2xl:px-8  border-b py-4  px-4 md:px-6">
@@ -93,7 +104,10 @@ export const CreatePost = (props) => {
                 </div>
 
                 <div className="">
-                  <button className="bg-orange-600 text-white px-3 py-1 rounded w-full 2xl:w-32">
+                  <button
+                    className="bg-orange-600 text-white px-3 py-1 rounded w-full 2xl:w-32"
+                    onClick={createPost}
+                  >
                     Post
                   </button>
                 </div>
