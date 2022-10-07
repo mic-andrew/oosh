@@ -52,8 +52,8 @@ export const SignUp = () => {
 
     return (
         <>
-            <main className='flex-1 items-center justify-center'>
-                <div className='bg-white'>
+            <main className=''>
+                <div className='bg-white py-12'>
                     <div className='w-full lg:w-5/6 2xl:w-1/2 lg:mx-auto lg:p-12'>
                         <img src={logo} className="w-20 mx-auto" alt='img' />
                         <div className='my-6 px-4'>
