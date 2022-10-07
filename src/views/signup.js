@@ -169,7 +169,7 @@ export const SignUp = () => {
                                                             type="date"
                                                             name="firstname"
                                                             className="block w-full mt-1 border p-3  text-base font-medium focus:border-slate-700 focus:outline-none focus:shadow-outline-purple shadow shadow-slate-100 rounded-md"
-                                                            placeholder="First Name"
+                                                            placeholder="DOB"
                                                         />
                                                         <ErrorMessage name="firstname" component="span" className="text-red-500" /> {/*to display the error message for the field*/}
                                                     </label>
