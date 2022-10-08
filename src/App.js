@@ -6,6 +6,7 @@ import { ForgotPassword } from './views/forgotpassword';
 import { CheckEmail } from './views/checkemail';
 import { Dashboard } from './views/dashboard/dashboard';
 import { DashHeader } from './components/dashboard/dashheader';
+import { Errorpage } from './404';
 
 
 
@@ -24,6 +25,9 @@ function App() {
         <Route path="/dashboard" element={<DashHeader/>}>
           <Route index element={<Dashboard/>}></Route>
         </Route>
+
+
+        <Route path="*" element={<Errorpage/>}></Route>
       </Routes>
     
     </>

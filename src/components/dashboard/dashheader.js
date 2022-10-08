@@ -52,9 +52,9 @@ export const DashHeader = () => {
 
                             <div className="mt-6">
                                 <div className="relative">
-                                    <NavLink to="/dashboard" onClick={toggleNav} className={({ isActive }) => (isActive ? "text-sm border-l-4  font-medium bg-gray-200 dark:bg-orange-600 rounded border-purple-600 text-purple-800 px-6 py-3 inline-flex items-center w-full md:text-base  md:font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100" : "px-6 py-3 inline-flex font-medium items-center w-full md:text-base md:font-semibold text-gray-500 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-500")}>
+                                    <NavLink to="/dashboard" onClick={toggleNav} className={({ isActive }) => (isActive ? "text-white bg-orange-600 font-medium inline-flex w-full text-sm md:text-base md:font-semibold transition-colors duration-150 px-6 py-3" : "px-6 py-3 inline-flex font-medium items-center w-full md:text-base md:font-semibold text-gray-500 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-500")}>
                                         <svg
-                                            className="w-5 h-5"
+                                            className="w-6 h-6"
                                             aria-hidden="true"
                                             fill="none"
                                             stroke-linecap="round"
@@ -72,27 +72,17 @@ export const DashHeader = () => {
                                 </div>
 
                                 <div className="relative">
-                                    <NavLink to="requests" onClick={toggleNav} className={({ isActive }) => (isActive ? "border-l-4 rounded font-medium bg-gray-100 dark:bg-gray-700 border-purple-600 text-gray-800 px-6 py-3 inline-flex items-center w-full text-sm md:text-base md:font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100" : "px-6 py-3 inline-flex font-medium items-center w-full text-sm md:text-base md:font-semibold text-gray-500 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-500")}>
-                                        <svg
-                                            className="w-5 h-5"
-                                            aria-hidden="true"
-                                            fill="none"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                        >
-                                            <path
-                                                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
-                                            ></path>
+                                    <NavLink to="requests" onClick={toggleNav} className={({ isActive }) => (isActive ? "text-white bg-orange-600 font-medium inline-flex w-full text-sm md:text-base md:font-semibold transition-colors duration-150 px-6 py-3" : "px-6 py-3 inline-flex font-medium items-center w-full md:text-base md:font-semibold text-gray-500 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-500")}>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8.25V18a2.25 2.25 0 002.25 2.25h13.5A2.25 2.25 0 0021 18V8.25m-18 0V6a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 6v2.25m-18 0h18M5.25 6h.008v.008H5.25V6zM7.5 6h.008v.008H7.5V6zm2.25 0h.008v.008H9.75V6z" />
                                         </svg>
+
                                         <span className="ml-4 ">Pages</span>
                                     </NavLink>
                                 </div>
 
                                 <div className="">
-                                    <NavLink to="accepted-requests" onClick={toggleNav} className={({ isActive }) => (isActive ? "border-l-4 rounded font-medium bg-gray-100 dark:bg-gray-700 border-purple-600 text-gray-800 px-6 py-3 inline-flex items-center w-full text-sm md:text-base md:font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100" : "px-6 py-3 inline-flex font-medium items-center w-full text-sm md:text-base md:font-semibold text-gray-500 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-500")}>
+                                    <NavLink to="accepted-requests" onClick={toggleNav} className={({ isActive }) => (isActive ? "text-white bg-orange-600 font-medium inline-flex w-full text-sm md:text-base md:font-semibold transition-colors duration-150 px-6 py-3" : "px-6 py-3 inline-flex font-medium items-center w-full md:text-base md:font-semibold text-gray-500 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-500")}>
                                         <svg
                                             className="w-5 h-5"
                                             aria-hidden="true"
@@ -113,7 +103,7 @@ export const DashHeader = () => {
 
 
                                 <div className="">
-                                    <NavLink to="personal-requests" onClick={toggleNav} className={({ isActive }) => (isActive ? "border-l-4 rounded bg-gray-100 dark:bg-gray-700 border-purple-600 text-gray-800 px-6 py-3 inline-flex items-center w-full text-sm font-medium md:text-base md:font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100" : "px-6 py-3 font-medium inline-flex items-center w-full text-sm md:text-base md:font-semibold text-gray-500 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-500")}>
+                                    <NavLink to="personal-requests" onClick={toggleNav} className={({ isActive }) => (isActive ? "text-white bg-orange-600 font-medium inline-flex w-full text-sm md:text-base md:font-semibold transition-colors duration-150 px-6 py-3" : "px-6 py-3 inline-flex font-medium items-center w-full md:text-base md:font-semibold text-gray-500 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-500")}>
                                         <svg
                                             className="w-5 h-5"
                                             aria-hidden="true"
@@ -134,7 +124,7 @@ export const DashHeader = () => {
 
 
                                 <div className="">
-                                    <NavLink to="personal-requests" onClick={toggleNav} className={({ isActive }) => (isActive ? "border-l-4 rounded bg-gray-100 dark:bg-gray-700 border-purple-600 text-gray-800 px-6 py-3 inline-flex items-center w-full text-sm font-medium md:text-base md:font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100" : "px-6 py-3 font-medium inline-flex items-center w-full text-sm md:text-base md:font-semibold text-gray-500 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-500")}>
+                                    <NavLink to="personal-requests" onClick={toggleNav} className={({ isActive }) => (isActive ? "text-white bg-orange-600 font-medium inline-flex w-full text-sm md:text-base md:font-semibold transition-colors duration-150 px-6 py-3" : "px-6 py-3 inline-flex font-medium items-center w-full md:text-base md:font-semibold text-gray-500 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-500")}>
                                         <svg
                                             className="w-5 h-5"
                                             aria-hidden="true"
@@ -155,7 +145,7 @@ export const DashHeader = () => {
 
 
                                 <div className="">
-                                    <NavLink to="personal-requests" onClick={toggleNav} className={({ isActive }) => (isActive ? "border-l-4 rounded bg-gray-100 dark:bg-gray-700 border-purple-600 text-gray-800 px-6 py-3 inline-flex items-center w-full text-sm font-medium md:text-base md:font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100" : "px-6 py-3 font-medium inline-flex items-center w-full text-sm md:text-base md:font-semibold text-gray-500 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-500")}>
+                                    <NavLink to="personal-requests" onClick={toggleNav} className={({ isActive }) => (isActive ? "text-white bg-orange-600 font-medium inline-flex w-full text-sm md:text-base md:font-semibold transition-colors duration-150 px-6 py-3" : "px-6 py-3 inline-flex font-medium items-center w-full md:text-base md:font-semibold text-gray-500 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-500")}>
                                         <svg
                                             className="w-5 h-5"
                                             aria-hidden="true"
@@ -176,7 +166,7 @@ export const DashHeader = () => {
 
 
                                 <div className="">
-                                    <NavLink to="personal-requests" onClick={toggleNav} className={({ isActive }) => (isActive ? "border-l-4 rounded bg-gray-100 dark:bg-gray-700 border-purple-600 text-gray-800 px-6 py-3 inline-flex items-center w-full text-sm font-medium md:text-base md:font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100" : "px-6 py-3 font-medium inline-flex items-center w-full text-sm md:text-base md:font-semibold text-gray-500 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-500")}>
+                                    <NavLink to="personal-requests" onClick={toggleNav} className={({ isActive }) => (isActive ? "text-white bg-orange-600 font-medium inline-flex w-full text-sm md:text-base md:font-semibold transition-colors duration-150 px-6 py-3" : "px-6 py-3 inline-flex font-medium items-center w-full md:text-base md:font-semibold text-gray-500 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-500")}>
                                         <svg
                                             className="w-5 h-5"
                                             aria-hidden="true"
@@ -196,7 +186,7 @@ export const DashHeader = () => {
                                 </div>
 
                                 <div className="">
-                                    <NavLink to="personal-requests" onClick={toggleNav} className={({ isActive }) => (isActive ? "border-l-4 rounded bg-gray-100 dark:bg-gray-700 border-purple-600 text-gray-800 px-6 py-3 inline-flex items-center w-full text-sm font-medium md:text-base md:font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100" : "px-6 py-3 font-medium inline-flex items-center w-full text-sm md:text-base md:font-semibold text-gray-500 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-500")}>
+                                    <NavLink to="personal-requests" onClick={toggleNav} className={({ isActive }) => (isActive ? "text-white bg-orange-600 font-medium inline-flex w-full text-sm md:text-base md:font-semibold transition-colors duration-150 px-6 py-3" : "px-6 py-3 inline-flex font-medium items-center w-full md:text-base md:font-semibold text-gray-500 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-500")}>
                                         <svg
                                             className="w-5 h-5"
                                             aria-hidden="true"
@@ -217,7 +207,7 @@ export const DashHeader = () => {
 
 
                                 <div className="">
-                                    <NavLink to="personal-requests" onClick={toggleNav} className={({ isActive }) => (isActive ? "border-l-4 rounded bg-gray-100 dark:bg-gray-700 border-purple-600 text-gray-800 px-6 py-3 inline-flex items-center w-full text-sm font-medium md:text-base md:font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100" : "px-6 py-3 font-medium inline-flex items-center w-full text-sm md:text-base md:font-semibold text-gray-500 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-500")}>
+                                    <NavLink to="personal-requests" onClick={toggleNav} className={({ isActive }) => (isActive ? "text-white bg-orange-600 font-medium inline-flex w-full text-sm md:text-base md:font-semibold transition-colors duration-150 px-6 py-3" : "px-6 py-3 inline-flex font-medium items-center w-full md:text-base md:font-semibold text-gray-500 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-500")}>
                                         <svg
                                             className="w-5 h-5"
                                             aria-hidden="true"

@@ -26,27 +26,27 @@ export const ActiveChats = () => {
 
                     <div className="flex gap-3">
                         <div className='w-1/6 mx-auto'>
-                            <img src={pp1} alt="" className='w-6 mx-auto' />
+                            <img src={pp1} alt="" className='w-6  2xl:w-full mx-auto' />
                             <p className='text-xs text-center'>Lilmow</p>
                         </div>
                         <div className='w-1/6 mx-auto'>
-                            <img src={pp2} alt="" className='w-6' />
+                            <img src={pp2} alt="" className='w-6 2xl:w-full mx-auto' />
                             <p className='text-xs text-center'>Ayo</p>
                         </div>
                         <div className='w-1/6 mx-auto'>
-                            <img src={pp3} alt="" className='w-6' />
+                            <img src={pp3} alt="" className='w-6 2xl:w-full mx-auto' />
                             <p className='text-xs text-center'>Emmma</p>
                         </div>
                         <div className='w-1/6'>
-                            <img src={pp4} alt="" className='w-6' />
+                            <img src={pp4} alt="" className='w-6 2xl:w-full mx-auto' />
                             <p className='text-xs text-center'>Ana</p>
                         </div>
                         <div className='w-1/6'>
-                            <img src={pp5} alt="" className='w-6' />
+                            <img src={pp5} alt="" className='w-6 2xl:w-full mx-auto' />
                             <p className='text-xs text-center'>Grace</p>
                         </div>
                         <div className='w-1/6'>
-                            <img src={pp6} alt="" className='w-6' />
+                            <img src={pp6} alt="" className='w-6 2xl:w-full mx-auto' />
                             <p className='text-xs text-center'>Moses</p>
                         </div>
                     </div>
