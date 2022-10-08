@@ -12,7 +12,7 @@ export const ActiveChats = () => {
     return (
         <>
             <section>
-                <div className='space-y-4'>
+                <div className='space-y-4   '>
                     <div className="flex justify-center  ">
                         <div className="relative w-full max-w-xl mr-6 focus-within:text-orange-600 text-blue-700">
                             <div className="absolute inset-y-0 flex items-center pl-2">
@@ -26,27 +26,27 @@ export const ActiveChats = () => {
 
                     <div className="flex gap-3">
                         <div className='w-1/6 mx-auto'>
-                            <img src={pp1} alt="" className='w-full' />
+                            <img src={pp1} alt="" className='w-6 mx-auto' />
                             <p className='text-xs text-center'>Lilmow</p>
                         </div>
                         <div className='w-1/6 mx-auto'>
-                            <img src={pp2} alt="" className='w-full' />
+                            <img src={pp2} alt="" className='w-6' />
                             <p className='text-xs text-center'>Ayo</p>
                         </div>
                         <div className='w-1/6 mx-auto'>
-                            <img src={pp3} alt="" className='w-full' />
+                            <img src={pp3} alt="" className='w-6' />
                             <p className='text-xs text-center'>Emmma</p>
                         </div>
                         <div className='w-1/6'>
-                            <img src={pp4} alt="" className='w-full' />
+                            <img src={pp4} alt="" className='w-6' />
                             <p className='text-xs text-center'>Ana</p>
                         </div>
                         <div className='w-1/6'>
-                            <img src={pp5} alt="" className='w-full' />
+                            <img src={pp5} alt="" className='w-6' />
                             <p className='text-xs text-center'>Grace</p>
                         </div>
                         <div className='w-1/6'>
-                            <img src={pp6} alt="" className='w-full' />
+                            <img src={pp6} alt="" className='w-6' />
                             <p className='text-xs text-center'>Moses</p>
                         </div>
                     </div>

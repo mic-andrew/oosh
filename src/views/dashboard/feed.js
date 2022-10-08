@@ -28,20 +28,20 @@ export const Feeds = () => {
                 </div>
 
                 <div className='flex items-center justify-between'>
-                    <div className='flex gap-1'>
-                        <i className="fa-solid fa-video text-sm"></i>
-                        <p className='text-sm'>Short Video</p>
+                    <div className='flex gap-2 items-center'>
+                        <i className="fa-solid fa-video text-sm md:text-base"></i>
+                        <p className='text-xs md:text-sm'>Short Video</p>
                     </div>
 
-                    <div className='flex gap-1'>
-                        <i class="fa-solid fa-camera text-sm"></i>
-                        <p className='text-sm'>Photo/Video</p>
+                    <div className='flex gap-2 items-center'>
+                        <i class="fa-solid fa-camera text-sm md:text-base"></i>
+                        <p className='text-xs md:text-sm'>Photo/Video</p>
                     </div>
 
 
-                    <div className='flex gap-1'>
-                        <i class="fa-regular fa-face-smile text-sm"></i>
-                        <p className='text-sm'>Feeling</p>
+                    <div className='flex gap-2 items-center'>
+                        <i class="fa-regular fa-face-smile text-sm md:text-base"></i>
+                        <p className='text-xs md:text-sm'>Feeling</p>
                     </div>
 
 

@@ -42,7 +42,7 @@ export const DashHeader = () => {
                         onClick={toggleNav}
                         className={`fixed inset-0 z-10 flex items-end bg-black bg-opacity-25 sm:items-center sm:justify-center lg:hidden ${mobileNav ? "translate-x-0" : "-translate-x-full"}`}
                     ></div>
-                    <aside className={`z-20 fixed transform h-screen lg:translate-x-0 transition duration-300 ease-in-out w-80 lg:mt-16 overflow-y-auto bg-white  md:block ${mobileNav ? "translate-x-0" : "-translate-x-full"}`}>
+                    <aside className={`z-20 fixed transform h-screen lg:translate-x-0 transition duration-300 ease-in-out w-72 lg:w-64 lg:mt-16 overflow-y-auto bg-white  md:block ${mobileNav ? "translate-x-0" : "-translate-x-full"}`}>
                         <div className="py-4 text-gray-500 dark:text-gray-400">
                             <div className="lg:hidden">
                                 <Link to="/dashboard" className=" flex items-center space-x-3 ml-6 text-lg font-bold text-gray-800 dark:text-gray-200">
@@ -297,7 +297,7 @@ export const DashHeader = () => {
                         </header>
 
                         {/* main display */}
-                        <main className="relative overflow-y-auto px-6 lg:px-14 lg:ml-80 ">
+                        <main className="relative overflow-y-auto px-6 lg:px-14 lg:ml-64 ">
                             <div className="mt-20 xl:mt-28">
                                 <Outlet />
                             </div>
