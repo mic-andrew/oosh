@@ -7,10 +7,20 @@ import pp3 from '../../assets/3.png'
 import pp4 from '../../assets/4.png'
 import pp5 from '../../assets/5.png'
 import pp6 from '../../assets/6.png'
+import { useState } from 'react'
 
 
 
 export const Activity = () => {
+
+
+    const [eventOpt, seteventOpt] = useState(false);
+
+
+    const showEventOption = () => {
+        seteventOpt(!eventOpt);
+    }
+
     return (
         <>
 
@@ -48,14 +58,35 @@ export const Activity = () => {
                     </div>
                 </section>
 
-                <section className='shadow shadow-slate-400 rounded-lg space-y-4 pt-2 pb-4'>
+                <section className='relative shadow shadow-slate-400 rounded-lg space-y-4 pt-2 pb-4'>
 
                     <div className=' border-b pb-2'>
                         <div className='flex justify-between px-4'>
                             <p className='font-medium'>Recent Events </p>
-                            <p className='text-sm text-orange-600 font-semibold'><i class="fa-solid fa-ellipsis"></i></p>
+                            <button onClick={showEventOption} className='text-sm text-orange-600 font-semibold'><i class="fa-solid fa-ellipsis"></i></button>
                         </div>
                     </div>
+
+                    {
+                        eventOpt && (
+                            <div className='absolute z-40 shadow shadow-slate-400 rounded-lg space-y-3  bg-white right-0 top-6 p-3'>
+
+                                <div className='flex justify-between'>
+                                    <div className='flex gap-2'>
+                                        <div><i class="fa-solid fa-eye-slash text-orange-600 text-sm"></i></div>
+                                        <div><p className='font-medium text-sm'>Hide Event</p></div>
+                                    </div>
+                                </div>
+
+                                <div className='flex justify-between'>
+                                    <div className='flex gap-2'>
+                                        <div><i class="fa-solid fa-triangle-exclamation text-orange-600 text-sm"></i></div>
+                                        <div className='font-medium text-sm'>Report Event </div>
+                                    </div>
+                                </div>
+                            </div>
+                        )
+                    }
 
 
 
