@@ -56,7 +56,7 @@ export const ActiveChats = () => {
                 </section>
 
 
-                <section className='overflow-y-scroll h-screen space-y-5 w-full px-4 py-10'>
+                <section className='overflow-y-scroll h-screen space-y-5 w-full px-2 py-10'>
                     <section className='shadow shadow-slate-400 rounded-lg space-y-4 pt-2 pb-4'>
 
                         <div className=' border-b pb-2'>

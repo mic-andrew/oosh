@@ -165,7 +165,7 @@ export const Feeds = () => {
                                             </svg>
 
                                         </div>
-                                        <input className="w-full pl-3 py-3 text-sm text-gray-700 placeholder-gray-600 bg-gray-100 border-0 rounded-md dark:focus:shadow-outline-gray  focus:placeholder-gray-500 focus:bg-white focus:border-orange-300 focus:outline-none focus:shadow-outline-purple form-input" type="text" placeholder="Write a comment..." aria-label="Search" />
+                                        <input className="w-full pl-3 py-3 pr-20 text-sm text-gray-700 placeholder-gray-600 bg-gray-100 border-0 rounded-md dark:focus:shadow-outline-gray  focus:placeholder-gray-500 focus:bg-white focus:border-orange-300 focus:outline-none focus:shadow-outline-purple form-input" type="text" placeholder="Write a comment..." aria-label="Search" />
                                     </div>
                                 </div>
                             </div>
@@ -281,7 +281,7 @@ export const Feeds = () => {
                                             </svg>
 
                                         </div>
-                                        <input className="w-full pl-3 py-3 text-sm text-gray-700 placeholder-gray-600 bg-gray-100 border-0 rounded-md dark:focus:shadow-outline-gray  focus:placeholder-gray-500 focus:bg-white focus:border-orange-300 focus:outline-none focus:shadow-outline-purple form-input" type="text" placeholder="Write a comment..." aria-label="Search" />
+                                        <input className="w-full pl-3 py-3 pr-20 text-sm text-gray-700 placeholder-gray-600 bg-gray-100 border-0 rounded-md dark:focus:shadow-outline-gray  focus:placeholder-gray-500 focus:bg-white focus:border-orange-300 focus:outline-none focus:shadow-outline-purple form-input" type="text" placeholder="Write a comment..." aria-label="Search" />
                                     </div>
                                 </div>
                             </div>
