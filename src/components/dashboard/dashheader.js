@@ -3,6 +3,8 @@ import { NavLink, Outlet, Link, useNavigate } from "react-router-dom";
 import Logo from '../../assets/logo.png'
 import { Theme } from "./theme";
 import dp from '../../assets/dp.png'
+import { Activity } from "../../views/dashboard/activity";
+import { ActiveChats } from "../../views/dashboard/activeChats";
 
 
 
@@ -72,7 +74,7 @@ export const DashHeader = () => {
                                 </div>
 
                                 <div className="relative">
-                                    <NavLink to="requests" onClick={toggleNav} className={({ isActive }) => (isActive ? "text-white bg-orange-600 font-medium inline-flex w-full text-sm md:text-base md:font-semibold transition-colors duration-150 px-6 py-3" : "px-6 py-3 inline-flex font-medium items-center w-full md:text-base md:font-semibold text-gray-500 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-500")}>
+                                    <NavLink to="path" onClick={toggleNav} className={({ isActive }) => (isActive ? "text-white bg-orange-600 font-medium inline-flex w-full text-sm md:text-base md:font-semibold transition-colors duration-150 px-6 py-3" : "px-6 py-3 inline-flex font-medium items-center w-full md:text-base md:font-semibold text-gray-500 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-500")}>
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M3 8.25V18a2.25 2.25 0 002.25 2.25h13.5A2.25 2.25 0 0021 18V8.25m-18 0V6a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 6v2.25m-18 0h18M5.25 6h.008v.008H5.25V6zM7.5 6h.008v.008H7.5V6zm2.25 0h.008v.008H9.75V6z" />
                                         </svg>
@@ -287,9 +289,21 @@ export const DashHeader = () => {
                         </header>
 
                         {/* main display */}
-                        <main className="relative overflow-y-auto px-6 lg:px-14 lg:ml-64 ">
+                        <main className="relative overflow-y-auto px-6 lg:px-14 lg:ml-64 2xl:ml-72">
                             <div className="mt-20 xl:mt-28">
-                                <Outlet />
+                                <div className="flex gap-6 justify-between">
+                                    <div className="w-full xl:w-1/2" >
+                                        <Outlet />
+                                    </div>
+                                    <div className="hidden xl:flex w-1/2 fixed gap-6 2xl:gap-10 ml-[39%] 2xl:ml-[43%] " >
+                                        <div className=" w-1/3" >
+                                            <Activity />
+                                        </div>
+                                        <div className="w-1/3">
+                                            <ActiveChats />
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </main>
                     </div>

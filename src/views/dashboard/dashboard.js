@@ -18,21 +18,16 @@ export const Dashboard = () => {
 
     return (
         <>
-          <main>
-
-                <div className="flex lg:gap-6 mt-16">
-                    <div className="w-full xl:w-2/4 h-screen">
+            <main>
+                <div className="flex gap-6 justify-between">
+                    <div className="w-full xl:w-1/2" >
                         <Feeds />
                     </div>
-
-                    <div className="xl:w-1/4 hidden xl:block">
-                        <div className="sticky  h-screen">
+                    <div className="hidden xl:flex w-1/2 fixed gap-6 2xl:gap-10 ml-[39%] 2xl:ml-[43%] " >
+                        <div className=" w-1/3" >
                             <Activity />
                         </div>
-                    </div>
-
-                    <div className="xl:w-1/4  hidden xl:block">
-                        <div className="top-0 sticky h-screen">
+                        <div className="w-1/3">
                             <ActiveChats />
                         </div>
                     </div>

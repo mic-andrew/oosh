@@ -9,3 +9,18 @@
 body{
   font-family: nunito;
 }
+
+
+::-webkit-scrollbar{
+  width: .50rem;
+  background-color: rgba(34, 17, 4, 0.123);
+}
+
+::-webkit-scrollbar-thumb{
+  background-color:rgba(36, 19, 6, 0.3) ;
+  border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: var(--text-color-light);
+}
