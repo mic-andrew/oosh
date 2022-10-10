@@ -10,10 +10,30 @@ import img8 from '../../assets/img8.png'
 import img9 from '../../assets/img9.png'
 
 import dp from '../../assets/dp.png'
+import { useState } from 'react'
+import ReactSwitch from 'react-switch'
 
 
 
 export const ActiveChats = () => {
+
+
+
+    const [sound, setSound] = useState(false);
+    const [not, setNot] = useState(false)
+
+
+    const soundSetting = () => {
+        setSound(!sound);
+    }
+
+    const toggleSound = () => {
+        setNot(!not)
+        console.log("we are here")
+    }
+
+
+
     return (
         <>
             <section className='space-y-6'>
@@ -59,19 +79,50 @@ export const ActiveChats = () => {
                     </div>
                 </section>
 
-                <section className=''>
+                <section className='relative'>
                     <div className=' border-b pb-2'>
                         <div className='flex justify-between px-4'>
                             <p className='font-medium'>Friends </p>
-                            <p className='text-sm text-orange-600 font-semibold'><i class="fa-solid fa-ellipsis"></i></p>
+                            <button onClick={soundSetting} className='text-sm text-orange-600 font-semibold'><i class="fa-solid fa-ellipsis"></i></button>
                         </div>
+                        {
+                            sound && (
+                                <div className='absolute z-40 shadow shadow-slate-400 rounded-lg space-y-3  bg-white w-full top-10 p-3'>
+
+                                    <div className='flex items-center justify-between'>
+                                        <div className='flex gap-2'>
+                                            <div><i class="fa-solid fa-volume-xmark text-sm text-orange-600"></i></div>
+                                            <div><p className='font-medium text-sm'>Message Sound</p></div>
+                                        </div>
+                                        <div><ReactSwitch onChange={toggleSound} checked={not === true} /></div>
+                                    </div>
+
+                                    <div className='flex items-center justify-between'>
+                                        <div className='flex gap-2'>
+                                            <div><i class="fa-solid fa-phone-volume text-orange-600"></i></div>
+                                            <div className='font-medium text-sm'>Call Sound</div>
+                                        </div>
+                                        <div><ReactSwitch onChange={toggleSound} checked={not === true} /></div>
+                                    </div>
+
+                                    <div className='flex items-center justify-between'>
+                                        <div className='flex gap-2'>
+                                            <div><i class="fa-solid fa-bell-slash text-orange-600"></i></div>
+                                            <div><p className='font-medium text-sm'>Turn off active sound</p></div>
+                                        </div>
+                                        <div><ReactSwitch onChange={toggleSound} checked={not === true} /></div>
+                                    </div>
+
+                                </div>
+                            )
+                        }
                     </div>
 
                     <div className='overflow-y-scroll h-screen space-y-5 w-full px-2 py-5'>
                         <div className='flex justify-between items-center'>
                             <div className='flex gap-2 items-center'>
                                 <div>
-                                    <img src={img8} alt="imgae" className='rounded-full w-9'/>
+                                    <img src={img8} alt="imgae" className='rounded-full w-9' />
                                 </div>
 
                                 <div>
@@ -87,7 +138,7 @@ export const ActiveChats = () => {
                         <div className='flex justify-between items-center'>
                             <div className='flex gap-2 items-center'>
                                 <div>
-                                    <img src={img7} alt="imgae" className='rounded-full w-9'/>
+                                    <img src={img7} alt="imgae" className='rounded-full w-9' />
                                 </div>
 
                                 <div>
@@ -103,7 +154,7 @@ export const ActiveChats = () => {
                         <div className='flex justify-between items-center'>
                             <div className='flex gap-2 items-center'>
                                 <div>
-                                    <img src={img9} alt="imgae" className='rounded-full w-9'/>
+                                    <img src={img9} alt="imgae" className='rounded-full w-9' />
                                 </div>
 
                                 <div>
@@ -119,7 +170,7 @@ export const ActiveChats = () => {
                         <div className='flex justify-between items-center'>
                             <div className='flex gap-2 items-center'>
                                 <div>
-                                    <img src={img8} alt="imgae" className='rounded-full w-9'/>
+                                    <img src={img8} alt="imgae" className='rounded-full w-9' />
                                 </div>
 
                                 <div>
@@ -134,7 +185,7 @@ export const ActiveChats = () => {
                         <div className='flex justify-between items-center'>
                             <div className='flex gap-2 items-center'>
                                 <div>
-                                    <img src={img8} alt="imgae" className='rounded-full w-9'/>
+                                    <img src={img8} alt="imgae" className='rounded-full w-9' />
                                 </div>
 
                                 <div>
@@ -150,7 +201,7 @@ export const ActiveChats = () => {
                         <div className='flex justify-between items-center'>
                             <div className='flex gap-2 items-center'>
                                 <div>
-                                    <img src={img9} alt="imgae" className='rounded-full w-9'/>
+                                    <img src={img9} alt="imgae" className='rounded-full w-9' />
                                 </div>
 
                                 <div>
@@ -165,7 +216,7 @@ export const ActiveChats = () => {
                         <div className='flex justify-between items-center'>
                             <div className='flex gap-2 items-center'>
                                 <div>
-                                    <img src={img7} alt="imgae" className='rounded-full w-9'/>
+                                    <img src={img7} alt="imgae" className='rounded-full w-9' />
                                 </div>
 
                                 <div>
@@ -181,7 +232,7 @@ export const ActiveChats = () => {
                         <div className='flex justify-between items-center'>
                             <div className='flex gap-2 items-center'>
                                 <div>
-                                    <img src={img8} alt="imgae" className='rounded-full w-9'/>
+                                    <img src={img8} alt="imgae" className='rounded-full w-9' />
                                 </div>
 
                                 <div>
@@ -197,7 +248,7 @@ export const ActiveChats = () => {
                         <div className='flex justify-between items-center'>
                             <div className='flex gap-2 items-center'>
                                 <div>
-                                    <img src={img8} alt="imgae" className='rounded-full w-9'/>
+                                    <img src={img8} alt="imgae" className='rounded-full w-9' />
                                 </div>
 
                                 <div>
@@ -213,7 +264,7 @@ export const ActiveChats = () => {
                         <div className='flex justify-between items-center'>
                             <div className='flex gap-2 items-center'>
                                 <div>
-                                    <img src={img9} alt="imgae" className='rounded-full w-9'/>
+                                    <img src={img9} alt="imgae" className='rounded-full w-9' />
                                 </div>
 
                                 <div>
@@ -229,7 +280,7 @@ export const ActiveChats = () => {
                         <div className='flex justify-between items-center'>
                             <div className='flex gap-2 items-center'>
                                 <div>
-                                    <img src={img7} alt="imgae" className='rounded-full w-9'/>
+                                    <img src={img7} alt="imgae" className='rounded-full w-9' />
                                 </div>
 
                                 <div>
@@ -246,7 +297,7 @@ export const ActiveChats = () => {
                         <div className='flex justify-between items-center'>
                             <div className='flex gap-2 items-center'>
                                 <div>
-                                    <img src={img8} alt="imgae" className='rounded-full w-9'/>
+                                    <img src={img8} alt="imgae" className='rounded-full w-9' />
                                 </div>
 
                                 <div>
@@ -263,7 +314,7 @@ export const ActiveChats = () => {
                         <div className='flex justify-between items-center'>
                             <div className='flex gap-2 items-center'>
                                 <div>
-                                    <img src={img8} alt="imgae" className='rounded-full w-9'/>
+                                    <img src={img8} alt="imgae" className='rounded-full w-9' />
                                 </div>
 
                                 <div>
@@ -280,7 +331,7 @@ export const ActiveChats = () => {
                         <div className='flex justify-between items-center'>
                             <div className='flex gap-2 items-center'>
                                 <div>
-                                    <img src={img8} alt="imgae" className='rounded-full w-9'/>
+                                    <img src={img8} alt="imgae" className='rounded-full w-9' />
                                 </div>
 
                                 <div>
@@ -297,7 +348,7 @@ export const ActiveChats = () => {
                         <div className='flex justify-between items-center'>
                             <div className='flex gap-2 items-center'>
                                 <div>
-                                    <img src={img8} alt="imgae" className='rounded-full w-9'/>
+                                    <img src={img8} alt="imgae" className='rounded-full w-9' />
                                 </div>
 
                                 <div>
@@ -314,7 +365,7 @@ export const ActiveChats = () => {
                         <div className='flex justify-between items-center'>
                             <div className='flex gap-2 items-center'>
                                 <div>
-                                    <img src={img8} alt="imgae" className='rounded-full w-9'/>
+                                    <img src={img8} alt="imgae" className='rounded-full w-9' />
                                 </div>
 
                                 <div>
@@ -331,7 +382,7 @@ export const ActiveChats = () => {
                         <div className='flex justify-between items-center'>
                             <div className='flex gap-2 items-center'>
                                 <div>
-                                    <img src={img8} alt="imgae" className='rounded-full w-9'/>
+                                    <img src={img8} alt="imgae" className='rounded-full w-9' />
                                 </div>
 
                                 <div>
@@ -348,7 +399,7 @@ export const ActiveChats = () => {
                         <div className='flex justify-between items-center'>
                             <div className='flex gap-2 items-center'>
                                 <div>
-                                    <img src={img8} alt="imgae" className='rounded-full w-9'/>
+                                    <img src={img8} alt="imgae" className='rounded-full w-9' />
                                 </div>
 
                                 <div>
@@ -365,7 +416,7 @@ export const ActiveChats = () => {
                         <div className='flex justify-between items-center'>
                             <div className='flex gap-2 items-center'>
                                 <div>
-                                    <img src={img8} alt="imgae" className='rounded-full w-9'/>
+                                    <img src={img8} alt="imgae" className='rounded-full w-9' />
                                 </div>
 
                                 <div>

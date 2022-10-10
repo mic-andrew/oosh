@@ -21,12 +21,11 @@ import { CreatePost } from '../../components/dashboard/createpost'
 export const Feeds = () => {
 
 
-    const [showCreatePst, setShowCreatePst] = useState(true);
+    const [showCreatePst, setShowCreatePst] = useState(false);
 
 
 
     const showCreatePost = () => {
-        console.log("wecloek");
        setShowCreatePst(!showCreatePst)
     }
 
