@@ -5,6 +5,10 @@ import pp4 from '../../assets/4.png'
 import pp5 from '../../assets/5.png'
 import pp6 from '../../assets/6.png'
 
+import img7 from '../../assets/img7.png'
+import img8 from '../../assets/img8.png'
+import img9 from '../../assets/img9.png'
+
 import dp from '../../assets/dp.png'
 
 
@@ -55,436 +59,328 @@ export const ActiveChats = () => {
                     </div>
                 </section>
 
-
-                <section className='overflow-y-scroll h-screen space-y-5 w-full px-2 py-10'>
-                    <section className='shadow shadow-slate-400 rounded-lg space-y-4 pt-2 pb-4'>
-
-                        <div className=' border-b pb-2'>
-                            <div className='flex justify-between px-4'>
-                                <p className='font-medium'>Recent Events </p>
-                                <p className='text-sm text-orange-600 font-semibold'><i class="fa-solid fa-ellipsis"></i></p>
-                            </div>
+                <section className=''>
+                    <div className=' border-b pb-2'>
+                        <div className='flex justify-between px-4'>
+                            <p className='font-medium'>Friends </p>
+                            <p className='text-sm text-orange-600 font-semibold'><i class="fa-solid fa-ellipsis"></i></p>
                         </div>
+                    </div>
 
+                    <div className='overflow-y-scroll h-screen space-y-5 w-full px-2 py-5'>
+                        <div className='flex justify-between items-center'>
+                            <div className='flex gap-2 items-center'>
+                                <div>
+                                    <img src={img8} alt="imgae" className='rounded-full w-9'/>
+                                </div>
 
-
-                        <div className="flex px-4 gap-3 items-center">
-                            <div>
-                                <img src={dp} alt="img" className='w-8 rounded-full' />
-                            </div>
-
-                            <div>
-                                <p className='text-sm font-bold'>Emma</p>
-                                <p className='text-xs'>CEO of 5star</p>
-                            </div>
-                        </div>
-
-                        <div className='flex px-4 gap-6'>
-                            <div className=''>
-                                <button className='border-orange-600 border px-4 2xl:px-6 py-1.5 text-orange-600 rounded shadow shadow-orange-200 text-sm'>Ignore</button>
-                            </div>
-
-                            <div className=''>
-                                <button className='bg-orange-600  text-white px-4 2xl:px-6 py-1.5 rounded shadow shadow-orange-200 text-sm'>Connect</button>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section className='shadow shadow-slate-400 rounded-lg space-y-4 pt-2 pb-4'>
-                        <div className=' border-b pb-2'>
-                            <div className='flex justify-between px-4'>
-                                <p className='font-medium'>Recent Events </p>
-                                <p className='text-sm text-orange-600 font-semibold'><i class="fa-solid fa-ellipsis"></i></p>
-                            </div>
-                        </div>
-
-
-
-                        <div className="flex px-4 gap-3 items-center">
-                            <div>
-                                <img src={dp} alt="img" className='w-8 rounded-full' />
+                                <div>
+                                    <p className='text-sm font-medium'>Ayo Boy</p>
+                                </div>
                             </div>
 
                             <div>
-                                <p className='text-sm font-bold'>Emma</p>
-                                <p className='text-xs'>CEO of 5star</p>
+                                <p className='text-xs'>2 mins</p>
                             </div>
                         </div>
 
-                        <div className='flex px-4 gap-6'>
-                            <div className=''>
-                                <button className='border-orange-600 border px-4 2xl:px-6 py-1.5 text-orange-600 rounded shadow shadow-orange-200 text-sm'>Ignore</button>
-                            </div>
+                        <div className='flex justify-between items-center'>
+                            <div className='flex gap-2 items-center'>
+                                <div>
+                                    <img src={img7} alt="imgae" className='rounded-full w-9'/>
+                                </div>
 
-                            <div className=''>
-                                <button className='bg-orange-600  text-white px-4 2xl:px-6 py-1.5 rounded shadow shadow-orange-200 text-sm'>Connect</button>
-                            </div>
-                        </div>
-                    </section>
-
-                  <section className='shadow shadow-slate-400 rounded-lg space-y-4 pt-2 pb-4'>
-
-                        <div className=' border-b pb-2'>
-                            <div className='flex justify-between px-4'>
-                                <p className='font-medium'>Recent Events </p>
-                                <p className='text-sm text-orange-600 font-semibold'><i class="fa-solid fa-ellipsis"></i></p>
-                            </div>
-                        </div>
-
-
-
-                        <div className="flex px-4 gap-3 items-center">
-                            <div>
-                                <img src={dp} alt="img" className='w-8 rounded-full' />
+                                <div>
+                                    <p className='text-sm font-medium'>Emma Lu</p>
+                                </div>
                             </div>
 
                             <div>
-                                <p className='text-sm font-bold'>Emma</p>
-                                <p className='text-xs'>CEO of 5star</p>
+                                <p className='text-xs'><i class="fa-solid fa-circle text-green-500"></i></p>
                             </div>
                         </div>
 
-                        <div className='flex px-4 gap-6'>
-                            <div className=''>
-                                <button className='border-orange-600 border px-4 2xl:px-6 py-1.5 text-orange-600 rounded shadow shadow-orange-200 text-sm'>Ignore</button>
-                            </div>
+                        <div className='flex justify-between items-center'>
+                            <div className='flex gap-2 items-center'>
+                                <div>
+                                    <img src={img9} alt="imgae" className='rounded-full w-9'/>
+                                </div>
 
-                            <div className=''>
-                                <button className='bg-orange-600  text-white px-4 2xl:px-6 py-1.5 rounded shadow shadow-orange-200 text-sm'>Connect</button>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section className='shadow shadow-slate-400 rounded-lg space-y-4 pt-2 pb-4'>
-                        <div className=' border-b pb-2'>
-                            <div className='flex justify-between px-4'>
-                                <p className='font-medium'>Recent Events </p>
-                                <p className='text-sm text-orange-600 font-semibold'><i class="fa-solid fa-ellipsis"></i></p>
-                            </div>
-                        </div>
-
-
-
-                        <div className="flex px-4 gap-3 items-center">
-                            <div>
-                                <img src={dp} alt="img" className='w-8 rounded-full' />
+                                <div>
+                                    <p className='text-sm font-medium'>Ayo Boy</p>
+                                </div>
                             </div>
 
                             <div>
-                                <p className='text-sm font-bold'>Emma</p>
-                                <p className='text-xs'>CEO of 5star</p>
+                                <p className='text-xs'>2 mins</p>
                             </div>
                         </div>
 
-                        <div className='flex px-4 gap-6'>
-                            <div className=''>
-                                <button className='border-orange-600 border px-4 2xl:px-6 py-1.5 text-orange-600 rounded shadow shadow-orange-200 text-sm'>Ignore</button>
+                        <div className='flex justify-between items-center'>
+                            <div className='flex gap-2 items-center'>
+                                <div>
+                                    <img src={img8} alt="imgae" className='rounded-full w-9'/>
+                                </div>
+
+                                <div>
+                                    <p className='text-sm font-medium'>Ayo Boy</p>
+                                </div>
                             </div>
-
-                            <div className=''>
-                                <button className='bg-orange-600  text-white px-4 2xl:px-6 py-1.5 rounded shadow shadow-orange-200 text-sm'>Connect</button>
-                            </div>
-                        </div>
-                    </section> 
-
-
-
-
-                    <section className='shadow shadow-slate-400 rounded-lg space-y-4 pt-2 pb-4'>
-
-                        <div className=' border-b pb-2'>
-                            <div className='flex justify-between px-4'>
-                                <p className='font-medium'>Recent Events </p>
-                                <p className='text-sm text-orange-600 font-semibold'><i class="fa-solid fa-ellipsis"></i></p>
-                            </div>
-                        </div>
-
-
-
-                        <div className="flex px-4 gap-3 items-center">
                             <div>
-                                <img src={dp} alt="img" className='w-8 rounded-full' />
+                                <p className='text-xs'><i class="fa-solid fa-circle text-green-500"></i></p>
+                            </div>
+                        </div>
+
+                        <div className='flex justify-between items-center'>
+                            <div className='flex gap-2 items-center'>
+                                <div>
+                                    <img src={img8} alt="imgae" className='rounded-full w-9'/>
+                                </div>
+
+                                <div>
+                                    <p className='text-sm font-medium'>Ayo Boy</p>
+                                </div>
                             </div>
 
                             <div>
-                                <p className='text-sm font-bold'>Emma</p>
-                                <p className='text-xs'>CEO of 5star</p>
+                                <p className='text-xs'>2 mins</p>
                             </div>
                         </div>
 
-                        <div className='flex px-4 gap-6'>
-                            <div className=''>
-                                <button className='border-orange-600 border px-4 2xl:px-6 py-1.5 text-orange-600 rounded shadow shadow-orange-200 text-sm'>Ignore</button>
+                        <div className='flex justify-between items-center'>
+                            <div className='flex gap-2 items-center'>
+                                <div>
+                                    <img src={img9} alt="imgae" className='rounded-full w-9'/>
+                                </div>
+
+                                <div>
+                                    <p className='text-sm font-medium'>Ayo Boy</p>
+                                </div>
                             </div>
-
-                            <div className=''>
-                                <button className='bg-orange-600  text-white px-4 2xl:px-6 py-1.5 rounded shadow shadow-orange-200 text-sm'>Connect</button>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section className='shadow shadow-slate-400 rounded-lg space-y-4 pt-2 pb-4'>
-                        <div className=' border-b pb-2'>
-                            <div className='flex justify-between px-4'>
-                                <p className='font-medium'>Recent Events </p>
-                                <p className='text-sm text-orange-600 font-semibold'><i class="fa-solid fa-ellipsis"></i></p>
-                            </div>
-                        </div>
-
-
-
-                        <div className="flex px-4 gap-3 items-center">
                             <div>
-                                <img src={dp} alt="img" className='w-8 rounded-full' />
-                            </div>
-
-                            <div>
-                                <p className='text-sm font-bold'>Emma</p>
-                                <p className='text-xs'>CEO of 5star</p>
+                                <p className='text-xs'><i class="fa-solid fa-circle text-green-500"></i></p>
                             </div>
                         </div>
 
-                        <div className='flex px-4 gap-6'>
-                            <div className=''>
-                                <button className='border-orange-600 border px-4 2xl:px-6 py-1.5 text-orange-600 rounded shadow shadow-orange-200 text-sm'>Ignore</button>
-                            </div>
+                        <div className='flex justify-between items-center'>
+                            <div className='flex gap-2 items-center'>
+                                <div>
+                                    <img src={img7} alt="imgae" className='rounded-full w-9'/>
+                                </div>
 
-                            <div className=''>
-                                <button className='bg-orange-600  text-white px-4 2xl:px-6 py-1.5 rounded shadow shadow-orange-200 text-sm'>Connect</button>
-                            </div>
-                        </div>
-                    </section>
-
-
-
-                    <section className='shadow shadow-slate-400 rounded-lg space-y-4 pt-2 pb-4'>
-
-                        <div className=' border-b pb-2'>
-                            <div className='flex justify-between px-4'>
-                                <p className='font-medium'>Recent Events </p>
-                                <p className='text-sm text-orange-600 font-semibold'><i class="fa-solid fa-ellipsis"></i></p>
-                            </div>
-                        </div>
-
-
-
-                        <div className="flex px-4 gap-3 items-center">
-                            <div>
-                                <img src={dp} alt="img" className='w-8 rounded-full' />
+                                <div>
+                                    <p className='text-sm font-medium'>Ayo Boy</p>
+                                </div>
                             </div>
 
                             <div>
-                                <p className='text-sm font-bold'>Emma</p>
-                                <p className='text-xs'>CEO of 5star</p>
+                                <p className='text-xs'><i class="fa-solid fa-circle text-green-500"></i></p>
                             </div>
                         </div>
 
-                        <div className='flex px-4 gap-6'>
-                            <div className=''>
-                                <button className='border-orange-600 border px-4 2xl:px-6 py-1.5 text-orange-600 rounded shadow shadow-orange-200 text-sm'>Ignore</button>
-                            </div>
+                        <div className='flex justify-between items-center'>
+                            <div className='flex gap-2 items-center'>
+                                <div>
+                                    <img src={img8} alt="imgae" className='rounded-full w-9'/>
+                                </div>
 
-                            <div className=''>
-                                <button className='bg-orange-600  text-white px-4 2xl:px-6 py-1.5 rounded shadow shadow-orange-200 text-sm'>Connect</button>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section className='shadow shadow-slate-400 rounded-lg space-y-4 pt-2 pb-4'>
-                        <div className=' border-b pb-2'>
-                            <div className='flex justify-between px-4'>
-                                <p className='font-medium'>Recent Events </p>
-                                <p className='text-sm text-orange-600 font-semibold'><i class="fa-solid fa-ellipsis"></i></p>
-                            </div>
-                        </div>
-
-
-
-                        <div className="flex px-4 gap-3 items-center">
-                            <div>
-                                <img src={dp} alt="img" className='w-8 rounded-full' />
+                                <div>
+                                    <p className='text-sm font-medium'>Ayo Boy</p>
+                                </div>
                             </div>
 
                             <div>
-                                <p className='text-sm font-bold'>Emma</p>
-                                <p className='text-xs'>CEO of 5star</p>
+                                <p className='text-xs'>2 mins</p>
                             </div>
                         </div>
 
-                        <div className='flex px-4 gap-6'>
-                            <div className=''>
-                                <button className='border-orange-600 border px-4 2xl:px-6 py-1.5 text-orange-600 rounded shadow shadow-orange-200 text-sm'>Ignore</button>
-                            </div>
+                        <div className='flex justify-between items-center'>
+                            <div className='flex gap-2 items-center'>
+                                <div>
+                                    <img src={img8} alt="imgae" className='rounded-full w-9'/>
+                                </div>
 
-                            <div className=''>
-                                <button className='bg-orange-600  text-white px-4 2xl:px-6 py-1.5 rounded shadow shadow-orange-200 text-sm'>Connect</button>
-                            </div>
-                        </div>
-                    </section>
-
-
-                    <section className='shadow shadow-slate-400 rounded-lg space-y-4 pt-2 pb-4'>
-
-                        <div className=' border-b pb-2'>
-                            <div className='flex justify-between px-4'>
-                                <p className='font-medium'>Recent Events </p>
-                                <p className='text-sm text-orange-600 font-semibold'><i class="fa-solid fa-ellipsis"></i></p>
-                            </div>
-                        </div>
-
-
-
-                        <div className="flex px-4 gap-3 items-center">
-                            <div>
-                                <img src={dp} alt="img" className='w-8 rounded-full' />
+                                <div>
+                                    <p className='text-sm font-medium'>Emma Lu</p>
+                                </div>
                             </div>
 
                             <div>
-                                <p className='text-sm font-bold'>Emma</p>
-                                <p className='text-xs'>CEO of 5star</p>
+                                <p className='text-xs'><i class="fa-solid fa-circle text-green-500"></i></p>
                             </div>
                         </div>
 
-                        <div className='flex px-4 gap-6'>
-                            <div className=''>
-                                <button className='border-orange-600 border px-4 2xl:px-6 py-1.5 text-orange-600 rounded shadow shadow-orange-200 text-sm'>Ignore</button>
-                            </div>
+                        <div className='flex justify-between items-center'>
+                            <div className='flex gap-2 items-center'>
+                                <div>
+                                    <img src={img9} alt="imgae" className='rounded-full w-9'/>
+                                </div>
 
-                            <div className=''>
-                                <button className='bg-orange-600  text-white px-4 2xl:px-6 py-1.5 rounded shadow shadow-orange-200 text-sm'>Connect</button>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section className='shadow shadow-slate-400 rounded-lg space-y-4 pt-2 pb-4'>
-                        <div className=' border-b pb-2'>
-                            <div className='flex justify-between px-4'>
-                                <p className='font-medium'>Recent Events </p>
-                                <p className='text-sm text-orange-600 font-semibold'><i class="fa-solid fa-ellipsis"></i></p>
-                            </div>
-                        </div>
-
-
-
-                        <div className="flex px-4 gap-3 items-center">
-                            <div>
-                                <img src={dp} alt="img" className='w-8 rounded-full' />
+                                <div>
+                                    <p className='text-sm font-medium'>Timo Ley</p>
+                                </div>
                             </div>
 
                             <div>
-                                <p className='text-sm font-bold'>Emma</p>
-                                <p className='text-xs'>CEO of 5star</p>
+                                <p className='text-xs'><i class="fa-solid fa-circle text-green-500"></i></p>
                             </div>
                         </div>
 
-                        <div className='flex px-4 gap-6'>
-                            <div className=''>
-                                <button className='border-orange-600 border px-4 2xl:px-6 py-1.5 text-orange-600 rounded shadow shadow-orange-200 text-sm'>Ignore</button>
-                            </div>
+                        <div className='flex justify-between items-center'>
+                            <div className='flex gap-2 items-center'>
+                                <div>
+                                    <img src={img7} alt="imgae" className='rounded-full w-9'/>
+                                </div>
 
-                            <div className=''>
-                                <button className='bg-orange-600  text-white px-4 2xl:px-6 py-1.5 rounded shadow shadow-orange-200 text-sm'>Connect</button>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section className='shadow shadow-slate-400 rounded-lg space-y-4 pt-2 pb-4'>
-                        <div className=' border-b pb-2'>
-                            <div className='flex justify-between px-4'>
-                                <p className='font-medium'>Recent Events </p>
-                                <p className='text-sm text-orange-600 font-semibold'><i class="fa-solid fa-ellipsis"></i></p>
-                            </div>
-                        </div>
-
-
-
-                        <div className="flex px-4 gap-3 items-center">
-                            <div>
-                                <img src={dp} alt="img" className='w-8 rounded-full' />
+                                <div>
+                                    <p className='text-sm font-medium'>Ayo Boy</p>
+                                </div>
                             </div>
 
                             <div>
-                                <p className='text-sm font-bold'>Emma</p>
-                                <p className='text-xs'>CEO of 5star</p>
-                            </div>
-                        </div>
-
-                        <div className='flex px-4 gap-6'>
-                            <div className=''>
-                                <button className='border-orange-600 border px-4 2xl:px-6 py-1.5 text-orange-600 rounded shadow shadow-orange-200 text-sm'>Ignore</button>
-                            </div>
-
-                            <div className=''>
-                                <button className='bg-orange-600  text-white px-4 2xl:px-6 py-1.5 rounded shadow shadow-orange-200 text-sm'>Connect</button>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section className='shadow shadow-slate-400 rounded-lg space-y-4 pt-2 pb-4'>
-                        <div className=' border-b pb-2'>
-                            <div className='flex justify-between px-4'>
-                                <p className='font-medium'>Recent Events </p>
-                                <p className='text-sm text-orange-600 font-semibold'><i class="fa-solid fa-ellipsis"></i></p>
+                                <p className='text-xs'><i class="fa-solid fa-circle text-green-500"></i></p>
                             </div>
                         </div>
 
 
+                        <div className='flex justify-between items-center'>
+                            <div className='flex gap-2 items-center'>
+                                <div>
+                                    <img src={img8} alt="imgae" className='rounded-full w-9'/>
+                                </div>
 
-                        <div className="flex px-4 gap-3 items-center">
-                            <div>
-                                <img src={dp} alt="img" className='w-8 rounded-full' />
+                                <div>
+                                    <p className='text-sm font-medium'>Ayo Boy</p>
+                                </div>
                             </div>
 
                             <div>
-                                <p className='text-sm font-bold'>Emma</p>
-                                <p className='text-xs'>CEO of 5star</p>
-                            </div>
-                        </div>
-
-                        <div className='flex px-4 gap-6'>
-                            <div className=''>
-                                <button className='border-orange-600 border px-4 2xl:px-6 py-1.5 text-orange-600 rounded shadow shadow-orange-200 text-sm'>Ignore</button>
-                            </div>
-
-                            <div className=''>
-                                <button className='bg-orange-600  text-white px-4 2xl:px-6 py-1.5 rounded shadow shadow-orange-200 text-sm'>Connect</button>
-                            </div>
-                        </div>
-                    </section>
-
-
-                    <section className='shadow shadow-slate-400 rounded-lg space-y-4 pt-2 pb-4'>
-                        <div className=' border-b pb-2'>
-                            <div className='flex justify-between px-4'>
-                                <p className='font-medium'>Recent Events </p>
-                                <p className='text-sm text-orange-600 font-semibold'><i class="fa-solid fa-ellipsis"></i></p>
+                                <p className='text-xs'>2 mins</p>
                             </div>
                         </div>
 
 
+                        <div className='flex justify-between items-center'>
+                            <div className='flex gap-2 items-center'>
+                                <div>
+                                    <img src={img8} alt="imgae" className='rounded-full w-9'/>
+                                </div>
 
-                        <div className="flex px-4 gap-3 items-center">
-                            <div>
-                                <img src={dp} alt="img" className='w-8 rounded-full' />
+                                <div>
+                                    <p className='text-sm font-medium'>Ayo Boy</p>
+                                </div>
                             </div>
 
                             <div>
-                                <p className='text-sm font-bold'>Emma</p>
-                                <p className='text-xs'>CEO of 5star</p>
+                                <p className='text-xs'>2 mins</p>
                             </div>
                         </div>
 
-                        <div className='flex px-4 gap-6'>
-                            <div className=''>
-                                <button className='border-orange-600 border px-4 2xl:px-6 py-1.5 text-orange-600 rounded shadow shadow-orange-200 text-sm'>Ignore</button>
+
+                        <div className='flex justify-between items-center'>
+                            <div className='flex gap-2 items-center'>
+                                <div>
+                                    <img src={img8} alt="imgae" className='rounded-full w-9'/>
+                                </div>
+
+                                <div>
+                                    <p className='text-sm font-medium'>Ayo Boy</p>
+                                </div>
                             </div>
 
-                            <div className=''>
-                                <button className='bg-orange-600  text-white px-4 2xl:px-6 py-1.5 rounded shadow shadow-orange-200 text-sm'>Connect</button>
+                            <div>
+                                <p className='text-xs'>2 mins</p>
                             </div>
                         </div>
-                    </section> 
+
+
+                        <div className='flex justify-between items-center'>
+                            <div className='flex gap-2 items-center'>
+                                <div>
+                                    <img src={img8} alt="imgae" className='rounded-full w-9'/>
+                                </div>
+
+                                <div>
+                                    <p className='text-sm font-medium'>Ayo Boy</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <p className='text-xs'>2 mins</p>
+                            </div>
+                        </div>
+
+
+                        <div className='flex justify-between items-center'>
+                            <div className='flex gap-2 items-center'>
+                                <div>
+                                    <img src={img8} alt="imgae" className='rounded-full w-9'/>
+                                </div>
+
+                                <div>
+                                    <p className='text-sm font-medium'>Ayo Boy</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <p className='text-xs'>2 mins</p>
+                            </div>
+                        </div>
+
+
+                        <div className='flex justify-between items-center'>
+                            <div className='flex gap-2 items-center'>
+                                <div>
+                                    <img src={img8} alt="imgae" className='rounded-full w-9'/>
+                                </div>
+
+                                <div>
+                                    <p className='text-sm font-medium'>Ayo Boy</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <p className='text-xs'>2 mins</p>
+                            </div>
+                        </div>
+
+
+                        <div className='flex justify-between items-center'>
+                            <div className='flex gap-2 items-center'>
+                                <div>
+                                    <img src={img8} alt="imgae" className='rounded-full w-9'/>
+                                </div>
+
+                                <div>
+                                    <p className='text-sm font-medium'>Ayo Boy</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <p className='text-xs'>2 mins</p>
+                            </div>
+                        </div>
+
+
+                        <div className='flex justify-between items-center'>
+                            <div className='flex gap-2 items-center'>
+                                <div>
+                                    <img src={img8} alt="imgae" className='rounded-full w-9'/>
+                                </div>
+
+                                <div>
+                                    <p className='text-sm font-medium'>Ayo Boy</p>
+                                </div>
+                            </div>
+
+                            <div>
+                                <p className='text-xs'>2 mins</p>
+                            </div>
+                        </div>
+                    </div>
                 </section>
+
+
             </section>
 
         </>
