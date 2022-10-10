@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
 import { NavLink, Outlet, Link, useNavigate } from "react-router-dom";
 import Logo from '../../assets/logo.png'
-import { Theme } from "./theme";
+import { Theme } from "../../components/dashboard/theme";
 import dp from '../../assets/dp.png'
-import { Activity } from "../../views/dashboard/activity";
-import { ActiveChats } from "../../views/dashboard/activeChats";
+import { Activity } from "./activity";
+import { ActiveChats } from "./activeChats";
 
 
 
@@ -291,7 +291,7 @@ export const DashHeader = () => {
                         {/* main display */}
                         <main className="relative overflow-y-auto px-6 lg:px-14 lg:ml-64 2xl:ml-72">
                             <div className="mt-20 xl:mt-28">
-                                <div className="flex gap-6 justify-between">
+                                <div className="flex relative gap-6 justify-between">
                                     <div className="w-full xl:w-1/2" >
                                         <Outlet />
                                     </div>
