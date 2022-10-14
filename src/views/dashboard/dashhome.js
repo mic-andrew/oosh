@@ -289,7 +289,7 @@ export const DashHeader = () => {
                         </header>
 
                         {/* main display */}
-                        <main className="relative overflow-y-auto px-6 lg:px-14 lg:ml-64 2xl:ml-72">
+                        <main className="relative overflow-y-auto px-6 lg:px-14 lg:ml-64 2xl:ml-64">
                             <div className="mt-20 mb-10 xl:mt-28 xl:mb-10">
                                 <Outlet/>
                             </div>
