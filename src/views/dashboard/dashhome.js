@@ -105,7 +105,7 @@ export const DashHeader = () => {
 
 
                                 <div className="">
-                                    <NavLink to="personal-requests" onClick={toggleNav} className={({ isActive }) => (isActive ? "text-white bg-orange-600 font-medium inline-flex w-full text-sm md:text-base md:font-semibold transition-colors duration-150 px-6 py-3" : "px-6 py-3 inline-flex font-medium items-center w-full md:text-base md:font-semibold text-gray-500 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-500")}>
+                                    <NavLink to="message" onClick={toggleNav} className={({ isActive }) => (isActive ? "text-white bg-orange-600 font-medium inline-flex w-full text-sm md:text-base md:font-semibold transition-colors duration-150 px-6 py-3" : "px-6 py-3 inline-flex font-medium items-center w-full md:text-base md:font-semibold text-gray-500 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-500")}>
                                         <svg
                                             className="w-5 h-5"
                                             aria-hidden="true"
@@ -126,7 +126,7 @@ export const DashHeader = () => {
 
 
                                 <div className="">
-                                    <NavLink to="personal-requests" onClick={toggleNav} className={({ isActive }) => (isActive ? "text-white bg-orange-600 font-medium inline-flex w-full text-sm md:text-base md:font-semibold transition-colors duration-150 px-6 py-3" : "px-6 py-3 inline-flex font-medium items-center w-full md:text-base md:font-semibold text-gray-500 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-500")}>
+                                    <NavLink to="notification" onClick={toggleNav} className={({ isActive }) => (isActive ? "text-white bg-orange-600 font-medium inline-flex w-full text-sm md:text-base md:font-semibold transition-colors duration-150 px-6 py-3" : "px-6 py-3 inline-flex font-medium items-center w-full md:text-base md:font-semibold text-gray-500 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-500")}>
                                         <svg
                                             className="w-5 h-5"
                                             aria-hidden="true"
@@ -290,20 +290,8 @@ export const DashHeader = () => {
 
                         {/* main display */}
                         <main className="relative overflow-y-auto px-6 lg:px-14 lg:ml-64 2xl:ml-72">
-                            <div className="mt-20 xl:mt-28">
-                                <div className="flex relative gap-6 justify-between">
-                                    <div className="w-full xl:w-1/2" >
-                                        <Outlet />
-                                    </div>
-                                    <div className="hidden xl:flex w-1/2 fixed gap-6 2xl:gap-10 ml-[39%] 2xl:ml-[43%] " >
-                                        <div className=" w-1/3" >
-                                            <Activity />
-                                        </div>
-                                        <div className="w-1/3">
-                                            <ActiveChats />
-                                        </div>
-                                    </div>
-                                </div>
+                            <div className="mt-20 mb-10 xl:mt-28 xl:mb-10">
+                                <Outlet/>
                             </div>
                         </main>
                     </div>

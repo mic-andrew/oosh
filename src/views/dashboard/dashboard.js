@@ -19,7 +19,7 @@ export const Dashboard = () => {
     return (
         <>
             <main>
-                <div className="flex gap-6 justify-between">
+                <div className="flex relative gap-6 justify-between">
                     <div className="w-full xl:w-1/2" >
                         <Feeds />
                     </div>

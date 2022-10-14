@@ -420,7 +420,7 @@ export const ActiveChats = () => {
                                 </div>
 
                                 <div>
-                                    <p className='text-sm font-medium'>Ayo Boy</p>
+                                    <p className='text-sm font-medium'>Ayo Boy </p>
                                 </div>
                             </div>
 
