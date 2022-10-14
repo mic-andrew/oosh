@@ -245,7 +245,7 @@ export const MessageHome = () => {
                         <MobileActiveChat />
                     </section>
 
-                    <section className="hidden xl:block fixed xl:h-[85%] w-[100%] xl:w-[57%] xl:ml-[22%] xl:mt-0 shadow shadow-slate-400 rounded-lg py-4  2xl:px-8">
+                    <section className="hidden xl:block fixed xl:h-[85%]  xl:w-[57%] xl:ml-[22%] xl:mt-0 shadow shadow-slate-400 rounded-lg py-4  2xl:px-8">
                         <ChatSection />
                     </section>
                 </section>

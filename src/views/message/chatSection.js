@@ -195,7 +195,7 @@ export const ChatSection = (props) => {
                 </div>
             </div>
 
-            <div className='absolute bottom-0 w-full pr-12'>
+            <div className='absolute bottom-0 w-[93%] xl:w-full xl:pr-12 my-3 xl:mb-0'>
                 <div className="flex gap-x-3 items-center justify-between">
                     <div className='flex-1'>
                         <div className="flex justify-center flex-1 items-center">
