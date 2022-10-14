@@ -24,7 +24,7 @@ function App() {
 
       <ScrollToTop />
 
-      <Media query="(max-width:480px)">
+      <Media query="(max-width:1280px)">
         {
           matches => matches ? (
             <Routes>

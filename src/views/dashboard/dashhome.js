@@ -240,7 +240,7 @@ export const DashHeader = () => {
 
 
                         <header className="z-10 py-4 bg-white h-16 fixed w-full lg:px-16">
-                            <div className="flex items-center justify-between h-full px-6 text-purple-600">
+                            <div className="flex items-center justify-between h-full px-6 text-orange-600">
                                 {/* mobile hambuger */}
 
                                 <div className="hidden lg:block">
