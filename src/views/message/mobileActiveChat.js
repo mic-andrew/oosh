@@ -38,7 +38,7 @@ export const MobileActiveChat = () => {
             </div>
 
 
-            <div className='overflow-y-scroll h-[90%] space-y-5 w-full px-2 py-5'>
+            <div className='overflow-y-scroll h-[95%] space-y-5 w-full px-2 py-5'>
                 <div >
                     <div className='flex justify-between items-center border-b pb-3 cursor-pointer' onClick={passId}>
                         <div className='flex gap-2 items-center '>
