@@ -241,11 +241,11 @@ export const MessageHome = () => {
                         </div>
                     </section>
 
-                    <section className="xl:hidden block  h-[85%] fixed w-[90%] mx-auto shadow shadow-slate-400 rounded-lg py-4 px-3">
+                     <section className="xl:hidden block  h-[85%] fixed w-[90%] md:w-[95%] lg:w-[65%] mx-auto shadow shadow-slate-400 rounded-lg py-4 px-3">
                         <MobileActiveChat />
                     </section>
 
-                    <section className="hidden xl:block fixed xl:h-[85%]  xl:w-[57%] xl:ml-[22%] xl:mt-0 shadow shadow-slate-400 rounded-lg py-4 px-2 xl:px-8">
+                    <section className="hidden xl:block fixed xl:h-[85%]  xl:w-[55%] xl:ml-[22%] xl:mt-0 shadow shadow-slate-400 rounded-lg py-4 px-2 xl:px-8">
                         <ChatSection />
                     </section>
                 </section>

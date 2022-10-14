@@ -35,8 +35,6 @@ export const Dashboard = () => {
 
             </main>
 
-
-
         </>
     )
 }
