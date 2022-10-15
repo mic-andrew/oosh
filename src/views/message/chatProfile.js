@@ -1,5 +1,31 @@
 import { useState } from "react";
+
 import img9 from '../../assets/img9.png'
+
+import img1 from '../../assets/img1.jpg'
+import img2 from '../../assets/img2.jpg'
+import img3 from '../../assets/img3.jpg'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 export const ChatProfile = (props) => {
 
@@ -9,13 +35,13 @@ export const ChatProfile = (props) => {
 
     // accordion
     const [expanded, setExpanded] = useState(false);
-    const [isExpanded, setIsExpanded] = useState(true);
-    const [arrow, setArrow] = useState(false);
 
     const handleChangeAcc = (panel) => {
-        setExpanded(isExpanded ? panel : false);
-        setArrow(isExpanded === panel)
-        setIsExpanded(!isExpanded);
+        if (expanded === panel) {
+            setExpanded(false)
+        } else {
+            setExpanded(panel)
+        }
     };
 
 
@@ -66,10 +92,104 @@ export const ChatProfile = (props) => {
                         <p className="font-bold border-b pb-2">Shared Files</p>
 
                         <div className="space-y-2 px-4">
-                            <p> <i class="fa-solid fa-check w-6"></i> Mark as unread</p>
-                            <p><i class="fa-solid fa-volume-xmark w-6"></i> Mute conversation</p>
-                            <p> <i class="fa-solid fa-ban w-6"></i> Block</p>
-                            <p> <i class="fa-solid fa-trash-can w-6"></i>Delete chat</p>
+
+                            <div className="flex justify-between items-center cursor-pointer" onClick={() => handleChangeAcc("panel1")}>
+                                <div className="flex items-center gap-4">
+                                    <div className="text-orange-600"><i className={`fa-solid fa-file`}></i></div>
+                                    <div>
+                                        <p className="text-sm font-semibold">Documents</p>
+                                        <p className="text-[10px] text-slate-600"><span>100 files</span> <span>95mb</span></p>
+                                    </div>
+                                </div>
+                                <div><i className={`fa-solid fa-angle-right ${expanded !== "panel1" ? "rotate-0" : "rotate-90"}`}></i></div>
+                            </div>
+
+                            <div hidden={expanded !== 'panel1'} className="shadow text-xs bg-white py-5 px-4 z-40 rounded-md space-y-2.5 ">
+                                <p>No Documents for now</p>
+                            </div>
+
+
+
+
+
+
+                            <div className="flex justify-between items-center cursor-pointer" onClick={() => handleChangeAcc("panel2")}>
+                                <div className="flex items-center gap-4">
+                                    <div className="text-orange-600"><i class="fa-solid fa-image"></i></div>
+                                    <div>
+                                        <p className="text-sm font-semibold">Photos</p>
+                                        <p className="text-[10px] text-slate-600"><span>100 files</span> <span>95mb</span></p>
+                                    </div>
+                                </div>
+                                <div><i className={`fa-solid fa-angle-right ${expanded !== "panel2" ? "rotate-0" : "rotate-90"}`}></i></div>
+                            </div>
+
+
+                            <div hidden={expanded !== 'panel2'} className="shadow text-xs bg-white py-5 px-4 z-40 rounded-md space-y-2.5 ">
+                                <div class="grid grid-cols-3 gap-1.5 md:gap-4">
+                                    <div>
+                                        <img src={img1} alt="welcome" className=' w-24  h-24    rounded' />
+                                    </div>
+                                    <div>
+                                        <img src={img2} alt="welcome" className=' w-24  h-24    rounded ' />
+                                    </div>
+                                    <div>
+                                        <img src={img2} alt="welcome" className=' w-24  h-24    rounded ' />
+                                    </div>
+                                    <div>
+                                        <img src={img3} alt="welcome" className=' w-24  h-24    rounded' />
+                                    </div>
+                                    <div>
+                                        <img src={img3} alt="welcome" className=' w-24  h-24    rounded' />
+                                    </div>
+                                    <div>
+                                        <img src={img3} alt="welcome" className=' w-24  h-24    rounded' />
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+
+                            <div className="flex justify-between items-center cursor-pointer" onClick={() => handleChangeAcc("panel3")}>
+                                <div className="flex items-center gap-4">
+                                    <div className="text-orange-600"><i class="fa-brands fa-youtube"></i></div>
+                                    <div>
+                                        <p className="text-sm font-semibold">Videos</p>
+                                        <p className="text-[10px] text-slate-600"><span>100 files</span> <span>95mb</span></p>
+                                    </div>
+                                </div>
+                                <div><i className={`fa-solid fa-angle-right ${expanded !== "panel3" ? "rotate-0" : "rotate-90"} `}></i></div>
+                            </div>
+
+                            <div hidden={expanded !== 'panel3'} className="shadow text-xs bg-white py-5 px-4 z-40 rounded-md space-y-2.5 ">
+                                <p>No Documents for now</p>
+                            </div>
+
+
+
+
+
+
+                            <div className="flex justify-between items-center cursor-pointer" onClick={() => handleChangeAcc("panel4")}>
+                                <div className="flex items-center gap-4">
+                                    <div className="text-orange-600"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                                    <div>
+                                        <p className="text-sm font-semibold">Others</p>
+                                        <p className="text-[10px] text-slate-600"><span>100 files</span> <span>95mb</span></p>
+                                    </div>
+                                </div>
+                                <div><i className={`fa-solid fa-angle-right ${expanded !== "panel4" ? "rotate-0" : "rotate-90"}`}></i></div>
+                            </div>
+
+                            <div hidden={expanded !== 'panel4'} className="shadow text-xs bg-white py-5 px-4 z-40 rounded-md space-y-2.5 ">
+                                <p>No Documents for now</p>
+                            </div>
+
+
+
+
                         </div>
                     </div>
                 </div>
