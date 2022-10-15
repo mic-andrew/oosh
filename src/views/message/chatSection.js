@@ -14,6 +14,8 @@ export const ChatSection = () => {
 
     const [chatOpt, setchatOpt] = useState(false);
     const [replyChat, setreplyChat] = useState(false);
+    const [showProfile, setShowProfile] = useState(false)
+    const [acc, setAcc] = useState(false)
 
 
     const showchatOpt = (value) => {
@@ -27,6 +29,16 @@ export const ChatSection = () => {
         setreplyChat(!replyChat);
     }
 
+    const showtheProfile = () => {
+        setShowProfile(!showProfile)
+    }
+
+
+    // for more filter accordion
+    const handleAcc = () => {
+        setAcc(!acc);
+        console.log("am clicked")
+    }
 
 
 
@@ -49,9 +61,9 @@ export const ChatSection = () => {
                     </div>
 
                     <div className='flex items-center gap-4 text-slate-500'>
-                        <div><i class="fa-solid fa-phone"></i></div>
-                        <div><i class="fa-solid fa-video"></i></div>
-                        <div><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                        <button><i class="fa-solid fa-phone"></i></button>
+                        <button><i class="fa-solid fa-video"></i></button>
+                        <button onClick={handleAcc}><i class="fa-solid fa-ellipsis-vertical"></i></button>
                     </div>
                 </div>
                 <div className='my-3'>
@@ -308,7 +320,7 @@ export const ChatSection = () => {
             </div>
 
 
-            {/* <ChatProfile/> */}
+            <ChatProfile acc={acc} handleAcc={handleAcc}/>
 
         </>
     )
