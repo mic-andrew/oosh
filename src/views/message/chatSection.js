@@ -6,16 +6,25 @@ import img7 from '../../assets/img7.png'
 import img8 from '../../assets/img8.png'
 import img9 from '../../assets/img9.png'
 import { useState } from 'react'
+import { ChatProfile } from './chatProfile'
 
 
 export const ChatSection = () => {
 
 
     const [chatOpt, setchatOpt] = useState(false);
+    const [replyChat, setreplyChat] = useState(false);
 
 
-    const showchatOpt = () => {
+    const showchatOpt = (value) => {
         setchatOpt(!chatOpt);
+        if (value === "reply") {
+            showreplyChat();
+        }
+    }
+
+    const showreplyChat = () => {
+        setreplyChat(!replyChat);
     }
 
 
@@ -23,230 +32,246 @@ export const ChatSection = () => {
 
     return (
         <>
-                <div className=''>
-                    <div className="flex gap-2 justify-between items-center border-b pb-4">
-                        <div className="flex gap-4 items-center justify-center">
-                            <div><img src={img9} alt="image" className='rounded-full w-10 2xl:w-full' /></div>
-                            <div className=''>
-                                <h1 className='text-lg 2xl:text-2xl font-bold'>David Adedamola</h1>
-                                <div className='flex gap-2 text-xs 2xl:text-base items-start font-medium'>
-                                    <p>Active now</p>
-                                    <div><i class="fa-solid fa-circle text-green-500 text-[5px]"></i></div>
-                                </div>
+
+
+
+            <div className=''>
+                <div className="flex gap-2 justify-between items-center border-b pb-4">
+                    <div className="flex gap-4 items-center justify-center">
+                        <div><img src={img9} alt="image" className='rounded-full w-10 2xl:w-full' /></div>
+                        <div className=''>
+                            <h1 className='text-lg 2xl:text-2xl font-bold'>David Adedamola</h1>
+                            <div className='flex gap-2 text-xs 2xl:text-base items-start font-medium'>
+                                <p>Active now</p>
+                                <div><i class="fa-solid fa-circle text-green-500 text-[5px]"></i></div>
                             </div>
                         </div>
+                    </div>
 
-                        <div className='flex items-center gap-4 text-slate-500'>
-                            <div><i class="fa-solid fa-phone"></i></div>
-                            <div><i class="fa-solid fa-video"></i></div>
-                            <div><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                    <div className='flex items-center gap-4 text-slate-500'>
+                        <div><i class="fa-solid fa-phone"></i></div>
+                        <div><i class="fa-solid fa-video"></i></div>
+                        <div><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                    </div>
+                </div>
+                <div className='my-3'>
+                    <p className='text-xs 2xl:text-lg font-semibold text-center'>March 06, 2022</p>
+                </div>
+            </div>
+
+
+            <div className='overflow-y-scroll h-[80%] space-y-6 w-full py-5'>
+                <div className='flex items-center relative'>
+                    <div className='flex items-start space-x-4'>
+                        <div className='flex items-end -space-x-2 2xl:-space-x-3'>
+                            <img src={img9} alt="image" className='rounded-full w-28 md:w-14 2xl:w-12' />
+                            <div><i class="fa-solid fa-circle text-green-500 text-[10px] 2xl:text-xs "></i></div>
+                        </div>
+                        <div className='space-y-1.5'>
+                            <div className='bg-orange-600 text-white md:w-96 2xl:w-[500px] rounded-tl-xl rounded-tr-xl rounded-br-xl p-5'>
+                                <p className='text-sm 2xl:text-base'>Hello! Welcome on zue world. Just drop
+                                    me a line here if you have any questions
+                                    about our service.</p>
+                            </div>
+                            <p className='text-sm font-semibold text-slate-500'>10hrs</p>
                         </div>
                     </div>
-                    <div className='my-3'>
-                        <p className='text-xs 2xl:text-lg font-semibold text-center'>March 06, 2022</p>
+                    <div>
+                        <button className="" onClick={showchatOpt}>
+                            <i className="fa-solid fa-ellipsis text-orange-600 font-bold px-5 py-2"></i>
+                        </button>
+                        {
+                            chatOpt && (
+
+                                <div className='absolute shadow bg-white shadow-slate-400 rounded-lg z-20 right-1 md:right-auto py-2 top-5 2xl:ml-2 md:px-4 2xl:px-4'>
+                                    <div className='px-5 py-2 text-xs 2xl:text-base' onClick={() => showchatOpt("reply")}><button>Reply</button></div>
+                                    <div className='px-5 py-2 text-xs 2xl:text-base'><button>Forward</button></div>
+                                    <div className='px-5 py-2 text-xs 2xl:text-base'><button>Delete</button></div>
+                                </div>
+                            )
+                        }
+                    </div>
+
+                </div>
+
+                <div className='flex items-center justify-end relative'>
+                    <div>
+                        <button className="" onClick={showchatOpt}>
+                            <i className="fa-solid fa-ellipsis text-black font-bold px-5 py-2"></i>
+                        </button>
+                        {
+                            chatOpt && (
+
+                                <div className='absolute shadow bg-white shadow-slate-400 rounded-lg left-1 md:left-auto z-20 2xl:right-auto py-2 top-5 2xl:ml-2 md:px-4 2xl:px-4'>
+                                    <div className='px-5 py-2 text-xs 2xl:text-base' onClick={() => showchatOpt("reply")}><button>Reply</button></div>
+                                    <div className='px-5 py-2 text-xs 2xl:text-base'><button>Forward</button></div>
+                                    <div className='px-5 py-2 text-xs 2xl:text-base'><button>Delete</button></div>
+                                </div>
+                            )
+                        }
+                    </div>
+
+                    <div className='flex items-end space-x-4'>
+                        <div className='space-y-1.5'>
+                            <div className='bg-slate-100 text-black md:w-96 2xl:w-[500px]  rounded-tl-xl rounded-tr-xl rounded-br-xl p-5'>
+                                <p className='text-sm 2xl:text-base'>Hello! Welcome on zue world. Just drop
+                                    me a line here if you have any questions
+                                    about our service.</p>
+                            </div>
+                            <p className='text-sm font-semibold text-slate-500'>10hrs</p>
+                        </div>
+                        <div className='flex items-end -space-x-3'>
+                            <img src={img8} alt="image" className='rounded-full w-28 md:w-14 2xl:w-12' />
+                        </div>
                     </div>
                 </div>
 
+                <div className='flex items-center justify-end relative'>
+                    <div>
+                        <button className="" onClick={showchatOpt}>
+                            <i className="fa-solid fa-ellipsis text-black font-bold px-5 py-2"></i>
+                        </button>
+                        {
+                            chatOpt && (
 
-                <div className='overflow-y-scroll h-[80%] space-y-6 w-full py-5'>
-                    <div className='flex items-center relative'>
-                        <div className='flex items-start space-x-4'>
-                            <div className='flex items-end -space-x-2 2xl:-space-x-3'>
-                                <img src={img9} alt="image" className='rounded-full w-28 md:w-14 2xl:w-12' />
-                                <div><i class="fa-solid fa-circle text-green-500 text-[10px] 2xl:text-xs "></i></div>
-                            </div>
-                            <div className='space-y-1.5'>
-                                <div className='bg-orange-600 text-white md:w-96 2xl:w-[500px] rounded-tl-xl rounded-tr-xl rounded-br-xl p-5'>
-                                    <p className='text-sm 2xl:text-base'>Hello! Welcome on zue world. Just drop
-                                        me a line here if you have any questions
-                                        about our service.</p>
+                                <div className='absolute shadow bg-white shadow-slate-400 rounded-lg left-1 md:left-auto z-20 2xl:right-auto py-2 top-5 2xl:ml-2 md:px-4 2xl:px-4'>
+                                    <div className='px-5 py-2 text-xs 2xl:text-base' onClick={showchatOpt}><button>Reply</button></div>
+                                    <div className='px-5 py-2 text-xs 2xl:text-base'><button>Forward</button></div>
+                                    <div className='px-5 py-2 text-xs 2xl:text-base'><button>Delete</button></div>
                                 </div>
-                                <p className='text-sm font-semibold text-slate-500'>10hrs</p>
-                            </div>
-                        </div>
-                        <div>
-                            <button className="" onClick={showchatOpt}>
-                                <i className="fa-solid fa-ellipsis text-orange-600 font-bold px-5 py-2"></i>
-                            </button>
-                            {
-                                chatOpt && (
-
-                                    <div className='absolute shadow bg-white shadow-slate-400 rounded-lg z-20 right-1 md:right-auto py-2 top-5 2xl:ml-2 md:px-4 2xl:px-4'>
-                                        <div className='px-5 py-2 text-xs 2xl:text-base' onClick={showchatOpt}><button>Reply</button></div>
-                                        <div className='px-5 py-2 text-xs 2xl:text-base'><button>Forward</button></div>
-                                        <div className='px-5 py-2 text-xs 2xl:text-base'><button>Delete</button></div>
-                                    </div>
-                                )
-                            }
-                        </div>
-
+                            )
+                        }
                     </div>
 
-                    <div className='flex items-center justify-end relative'>
-                        <div>
-                            <button className="" onClick={showchatOpt}>
-                                <i className="fa-solid fa-ellipsis text-black font-bold px-5 py-2"></i>
-                            </button>
-                            {
-                                chatOpt && (
-
-                                    <div className='absolute shadow bg-white shadow-slate-400 rounded-lg left-1 md:left-auto z-20 2xl:right-auto py-2 top-5 2xl:ml-2 md:px-4 2xl:px-4'>
-                                        <div className='px-5 py-2 text-xs 2xl:text-base' onClick={showchatOpt}><button>Reply</button></div>
-                                        <div className='px-5 py-2 text-xs 2xl:text-base'><button>Forward</button></div>
-                                        <div className='px-5 py-2 text-xs 2xl:text-base'><button>Delete</button></div>
-                                    </div>
-                                )
-                            }
-                        </div>
-
-                        <div className='flex items-end space-x-4'>
-                            <div className='space-y-1.5'>
-                                <div className='bg-slate-100 text-black md:w-96 2xl:w-[500px]  rounded-tl-xl rounded-tr-xl rounded-br-xl p-5'>
-                                    <p className='text-sm 2xl:text-base'>Hello! Welcome on zue world. Just drop
-                                        me a line here if you have any questions
-                                        about our service.</p>
-                                </div>
-                                <p className='text-sm font-semibold text-slate-500'>10hrs</p>
+                    <div className='flex items-end space-x-4'>
+                        <div className='space-y-1.5'>
+                            <div className='bg-slate-100 text-black md:w-96 2xl:w-[500px]  rounded-tl-xl rounded-tr-xl rounded-br-xl p-5'>
+                                <p className='text-sm 2xl:text-base'>Hello! Welcome on zue world. Just drop
+                                    me a line here if you have any questions
+                                    about our service.</p>
                             </div>
-                            <div className='flex items-end -space-x-3'>
-                                <img src={img8} alt="image" className='rounded-full w-28 md:w-14 2xl:w-12' />
-                            </div>
+                            <p className='text-sm font-semibold text-slate-500'>10hrs</p>
                         </div>
-                    </div>
-
-                    <div className='flex items-center justify-end relative'>
-                        <div>
-                            <button className="" onClick={showchatOpt}>
-                                <i className="fa-solid fa-ellipsis text-black font-bold px-5 py-2"></i>
-                            </button>
-                            {
-                                chatOpt && (
-
-                                    <div className='absolute shadow bg-white shadow-slate-400 rounded-lg left-1 md:left-auto z-20 2xl:right-auto py-2 top-5 2xl:ml-2 md:px-4 2xl:px-4'>
-                                        <div className='px-5 py-2 text-xs 2xl:text-base' onClick={showchatOpt}><button>Reply</button></div>
-                                        <div className='px-5 py-2 text-xs 2xl:text-base'><button>Forward</button></div>
-                                        <div className='px-5 py-2 text-xs 2xl:text-base'><button>Delete</button></div>
-                                    </div>
-                                )
-                            }
+                        <div className='flex items-end -space-x-3'>
+                            <img src={img8} alt="image" className='rounded-full w-28 md:w-14 2xl:w-12' />
                         </div>
-
-                        <div className='flex items-end space-x-4'>
-                            <div className='space-y-1.5'>
-                                <div className='bg-slate-100 text-black md:w-96 2xl:w-[500px]  rounded-tl-xl rounded-tr-xl rounded-br-xl p-5'>
-                                    <p className='text-sm 2xl:text-base'>Hello! Welcome on zue world. Just drop
-                                        me a line here if you have any questions
-                                        about our service.</p>
-                                </div>
-                                <p className='text-sm font-semibold text-slate-500'>10hrs</p>
-                            </div>
-                            <div className='flex items-end -space-x-3'>
-                                <img src={img8} alt="image" className='rounded-full w-28 md:w-14 2xl:w-12' />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className='flex items-center relative'>
-                        <div className='flex items-start space-x-4'>
-                            <div className='flex items-end -space-x-2 2xl:-space-x-3'>
-                                <img src={img9} alt="image" className='rounded-full w-28 md:w-14 2xl:w-12' />
-                                <div><i class="fa-solid fa-circle text-green-500 text-[10px] 2xl:text-xs "></i></div>
-                            </div>
-                            <div className='space-y-1.5'>
-                                <div className='bg-orange-600 text-white md:w-96 2xl:w-[500px] rounded-tl-xl rounded-tr-xl rounded-br-xl p-5'>
-                                    <p className='text-sm 2xl:text-base'>Hello! Welcome on zue world. Just drop
-                                        me a line here if you have any questions
-                                        about our service.</p>
-                                </div>
-                                <p className='text-sm font-semibold text-slate-500'>10hrs</p>
-                            </div>
-                        </div>
-                        <div>
-                            <button className="" onClick={showchatOpt}>
-                                <i className="fa-solid fa-ellipsis text-orange-600 font-bold px-5 py-2"></i>
-                            </button>
-                            {
-                                chatOpt && (
-
-                                    <div className='absolute shadow bg-white shadow-slate-400 rounded-lg z-20 right-1 md:right-auto py-2 top-5 2xl:ml-2 md:px-4 2xl:px-4'>
-                                        <div className='px-5 py-2 text-xs 2xl:text-base' onClick={showchatOpt}><button>Reply</button></div>
-                                        <div className='px-5 py-2 text-xs 2xl:text-base'><button>Forward</button></div>
-                                        <div className='px-5 py-2 text-xs 2xl:text-base'><button>Delete</button></div>
-                                    </div>
-                                )
-                            }
-                        </div>
-
-                    </div>
-
-                    <div className='flex items-center justify-end relative'>
-                        <div>
-                            <button className="" onClick={showchatOpt}>
-                                <i className="fa-solid fa-ellipsis text-black font-bold px-5 py-2"></i>
-                            </button>
-                            {
-                                chatOpt && (
-
-                                    <div className='absolute shadow bg-white shadow-slate-400 rounded-lg left-1 md:left-auto z-20 2xl:right-auto py-2 top-5 2xl:ml-2 md:px-4 2xl:px-4'>
-                                        <div className='px-5 py-2 text-xs 2xl:text-base' onClick={showchatOpt}><button>Reply</button></div>
-                                        <div className='px-5 py-2 text-xs 2xl:text-base'><button>Forward</button></div>
-                                        <div className='px-5 py-2 text-xs 2xl:text-base'><button>Delete</button></div>
-                                    </div>
-                                )
-                            }
-                        </div>
-
-                        <div className='flex items-end space-x-4'>
-                            <div className='space-y-1.5'>
-                                <div className='bg-slate-100 text-black md:w-96 2xl:w-[500px]  rounded-tl-xl rounded-tr-xl rounded-br-xl p-5'>
-                                    <p className='text-sm 2xl:text-base'>Hello! Welcome on zue world. Just drop
-                                        me a line here if you have any questions
-                                        about our service.</p>
-                                </div>
-                                <p className='text-sm font-semibold text-slate-500'>10hrs</p>
-                            </div>
-                            <div className='flex items-end -space-x-3'>
-                                <img src={img8} alt="image" className='rounded-full w-28 md:w-14 2xl:w-12' />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className='flex items-center relative'>
-                        <div className='flex items-start space-x-4'>
-                            <div className='flex items-end -space-x-2 2xl:-space-x-3'>
-                                <img src={img9} alt="image" className='rounded-full w-28 md:w-14 2xl:w-12' />
-                                <div><i class="fa-solid fa-circle text-green-500 text-[10px] 2xl:text-xs "></i></div>
-                            </div>
-                            <div className='space-y-1.5'>
-                                <div className='bg-orange-600 text-white md:w-96 2xl:w-[500px] rounded-tl-xl rounded-tr-xl rounded-br-xl p-5'>
-                                    <p className='text-sm 2xl:text-base'>Hello! Welcome on zue world. Just drop
-                                        me a line here if you have any questions
-                                        about our service.</p>
-                                </div>
-                                <p className='text-sm font-semibold text-slate-500'>10hrs</p>
-                            </div>
-                        </div>
-                        <div>
-                            <button className="" onClick={showchatOpt}>
-                                <i className="fa-solid fa-ellipsis text-orange-600 font-bold px-5 py-2"></i>
-                            </button>
-                            {
-                                chatOpt && (
-
-                                    <div className='absolute shadow bg-white shadow-slate-400 rounded-lg z-20 right-1 md:right-auto py-2 top-5 2xl:ml-2 md:px-4 2xl:px-4'>
-                                        <div className='px-5 py-2 text-xs 2xl:text-base' onClick={showchatOpt}><button>Reply</button></div>
-                                        <div className='px-5 py-2 text-xs 2xl:text-base'><button>Forward</button></div>
-                                        <div className='px-5 py-2 text-xs 2xl:text-base'><button>Delete</button></div>
-                                    </div>
-                                )
-                            }
-                        </div>
-
                     </div>
                 </div>
 
-                <div className='absolute bottom-0 w-[90%] xl:w-full xl:pr-12 my-3 xl:mb-4'>
-                    <div className="flex gap-x-3 items-center justify-between">
+                <div className='flex items-center relative'>
+                    <div className='flex items-start space-x-4'>
+                        <div className='flex items-end -space-x-2 2xl:-space-x-3'>
+                            <img src={img9} alt="image" className='rounded-full w-28 md:w-14 2xl:w-12' />
+                            <div><i class="fa-solid fa-circle text-green-500 text-[10px] 2xl:text-xs "></i></div>
+                        </div>
+                        <div className='space-y-1.5'>
+                            <div className='bg-orange-600 text-white md:w-96 2xl:w-[500px] rounded-tl-xl rounded-tr-xl rounded-br-xl p-5'>
+                                <p className='text-sm 2xl:text-base'>Hello! Welcome on zue world. Just drop
+                                    me a line here if you have any questions
+                                    about our service.</p>
+                            </div>
+                            <p className='text-sm font-semibold text-slate-500'>10hrs</p>
+                        </div>
+                    </div>
+                    <div>
+                        <button className="" onClick={showchatOpt}>
+                            <i className="fa-solid fa-ellipsis text-orange-600 font-bold px-5 py-2"></i>
+                        </button>
+                        {
+                            chatOpt && (
+
+                                <div className='absolute shadow bg-white shadow-slate-400 rounded-lg z-20 right-1 md:right-auto py-2 top-5 2xl:ml-2 md:px-4 2xl:px-4'>
+                                    <div className='px-5 py-2 text-xs 2xl:text-base' onClick={showchatOpt}><button>Reply</button></div>
+                                    <div className='px-5 py-2 text-xs 2xl:text-base'><button>Forward</button></div>
+                                    <div className='px-5 py-2 text-xs 2xl:text-base'><button>Delete</button></div>
+                                </div>
+                            )
+                        }
+                    </div>
+
+                </div>
+
+                <div className='flex items-center justify-end relative'>
+                    <div>
+                        <button className="" onClick={showchatOpt}>
+                            <i className="fa-solid fa-ellipsis text-black font-bold px-5 py-2"></i>
+                        </button>
+                        {
+                            chatOpt && (
+
+                                <div className='absolute shadow bg-white shadow-slate-400 rounded-lg left-1 md:left-auto z-20 2xl:right-auto py-2 top-5 2xl:ml-2 md:px-4 2xl:px-4'>
+                                    <div className='px-5 py-2 text-xs 2xl:text-base' onClick={() => showchatOpt("reply")}><button>Reply</button></div>
+                                    <div className='px-5 py-2 text-xs 2xl:text-base'><button>Forward</button></div>
+                                    <div className='px-5 py-2 text-xs 2xl:text-base'><button>Delete</button></div>
+                                </div>
+                            )
+                        }
+                    </div>
+
+                    <div className='flex items-end space-x-4'>
+                        <div className='space-y-1.5'>
+                            <div className='bg-slate-100 text-black md:w-96 2xl:w-[500px]  rounded-tl-xl rounded-tr-xl rounded-br-xl p-5'>
+                                <p className='text-sm 2xl:text-base'>Hello! Welcome on zue world. Just drop
+                                    me a line here if you have any questions
+                                    about our service.</p>
+                            </div>
+                            <p className='text-sm font-semibold text-slate-500'>10hrs</p>
+                        </div>
+                        <div className='flex items-end -space-x-3'>
+                            <img src={img8} alt="image" className='rounded-full w-28 md:w-14 2xl:w-12' />
+                        </div>
+                    </div>
+                </div>
+
+                <div className='flex items-center relative'>
+                    <div className='flex items-start space-x-4'>
+                        <div className='flex items-end -space-x-2 2xl:-space-x-3'>
+                            <img src={img9} alt="image" className='rounded-full w-28 md:w-14 2xl:w-12' />
+                            <div><i class="fa-solid fa-circle text-green-500 text-[10px] 2xl:text-xs "></i></div>
+                        </div>
+                        <div className='space-y-1.5'>
+                            <div className='bg-orange-600 text-white md:w-96 2xl:w-[500px] rounded-tl-xl rounded-tr-xl rounded-br-xl p-5'>
+                                <p className='text-sm 2xl:text-base'>Hello! Welcome on zue world. Just drop
+                                    me a line here if you have any questions
+                                    about our service.</p>
+                            </div>
+                            <p className='text-sm font-semibold text-slate-500'>10hrs</p>
+                        </div>
+                    </div>
+                    <div>
+                        <button className="" onClick={showchatOpt}>
+                            <i className="fa-solid fa-ellipsis text-orange-600 font-bold px-5 py-2"></i>
+                        </button>
+                        {
+                            chatOpt && (
+
+                                <div className='absolute shadow bg-white shadow-slate-400 rounded-lg z-20 right-1 md:right-auto py-2 top-5 2xl:ml-2 md:px-4 2xl:px-4'>
+                                    <div className='px-5 py-2 text-xs 2xl:text-base' onClick={() => showchatOpt("reply")}><button>Reply</button></div>
+                                    <div className='px-5 py-2 text-xs 2xl:text-base'><button>Forward</button></div>
+                                    <div className='px-5 py-2 text-xs 2xl:text-base'><button>Delete</button></div>
+                                </div>
+                            )
+                        }
+                    </div>
+
+                </div>
+            </div>
+
+            <div className='relative w-full '>
+                {
+                    replyChat && (
+                        <div className='bg-gray-200 rounded-lg absolute z-10 -top-20 py-4 px-10'>
+                            <div className='flex justify-between'>
+                                <h1 className='font-bold'>Reply to David Adedamola</h1>
+                                <button onClick={showreplyChat}><i className=" text-sm fa-solid fa-xmark"></i></button>
+                            </div>
+                            <p className='text-xs'>Hello! How are you doing and the business</p>
+                        </div>
+                    )
+                }
+
+                <div className='absolute w-full'>
+                    <div className="flex gap-x-3 items-center justify-between pb-5 ">
                         <div className='flex-1'>
                             <div className="flex justify-center flex-1 items-center">
                                 <div className="relative w-full focus-within:text-orange-600 ">
@@ -267,6 +292,7 @@ export const ChatSection = () => {
                                         </svg>
 
                                     </div>
+
                                     <input className="w-full pl-3 py-3 pr-20 text-sm text-gray-700 placeholder-gray-600 bg-gray-100 border-0 rounded-md dark:focus:shadow-outline-gray  focus:placeholder-gray-500 focus:bg-white focus:border-orange-300 focus:outline-none focus:shadow-outline-purple " type="text" placeholder="Type something..." />
                                 </div>
                             </div>
@@ -279,6 +305,10 @@ export const ChatSection = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+
+
+            {/* <ChatProfile/> */}
 
         </>
     )
