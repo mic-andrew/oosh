@@ -39,11 +39,11 @@ export const MobileActiveChat = () => {
 
 
             <div className='overflow-y-scroll h-[95%] space-y-5 w-full px-2 py-5'>
-                <div >
+          
                     <div className='flex justify-between items-center border-b pb-3 cursor-pointer' onClick={passId}>
                         <div className='flex gap-2 items-center '>
                             <div>
-                                <img src={img8} alt="imgae" className='rounded-full w-12' />
+                                <img src={img8} alt="imgae" className='rounded-full w-9' />
                             </div>
 
                             <div className="">
@@ -58,7 +58,6 @@ export const MobileActiveChat = () => {
                         </div>
                     </div>
 
-                </div>
 
 
                 <div className='flex justify-between items-center border-b pb-3  cursor-pointer' onClick={passId}>

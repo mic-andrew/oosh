@@ -1,10 +1,26 @@
+import { useState } from 'react'
 import cv2 from '../../assets/cv1.jpg'
 import cvdp from '../../assets/dpcv.png'
+import { CoverPhotoUpload } from '../../components/profile/coverphotoUpload'
+import { EditProfile } from '../../components/profile/editProfile'
 import { Activity } from '../dashboard/activity'
 import { Feeds } from '../dashboard/feed'
 
 
 export const Profile = () => {
+
+    const [UploadCoverPhoto, setUploadCoverPhoto] = useState(false);
+    const [editProfile, setEditProfile] = useState(false);
+
+
+
+    const showUploadCoverPhoto = () => {
+        setUploadCoverPhoto(!UploadCoverPhoto)
+    }
+
+    const showEditProfile = () => {
+        setEditProfile(!editProfile)
+    }
 
     return (
         <>
@@ -22,7 +38,7 @@ export const Profile = () => {
                             </div>
 
                             <div>
-                                <button className='text-xs md:text-sm font-medium bg-slate-100 px-5 md:px-6 py-3 rounded-lg shadow-lg'><i class="fa-solid fa-cloud-arrow-up mr-2"></i> Edit Cover Photo</button>
+                                <button onClick={showUploadCoverPhoto} className='text-xs md:text-sm font-medium bg-slate-100 px-5 md:px-6 py-3 rounded-lg shadow-lg'><i class="fa-solid fa-cloud-arrow-up mr-2"></i> Edit Cover Photo</button>
                             </div>
                         </div>
                     </div>
@@ -34,11 +50,21 @@ export const Profile = () => {
                         </div>
 
                         <div className='space-x-2'>
-                            <button className='text-xs md:text-sm font-medium bg-slate-100 px-5 md:px-6 py-3 rounded-lg shadow-lg'><i class="fa-regular fa-pen-to-square mr-2"></i> Edit Profile</button>
+                            <button onClick={showEditProfile} className='text-xs md:text-sm font-medium bg-slate-100 px-5 md:px-6 py-3 rounded-lg shadow-lg'><i class="fa-regular fa-pen-to-square mr-2"></i> Edit Profile</button>
                             <button className='hidden text-xs md:text-sm font-medium bg-orange-600 text-white px-5 md:px-6 py-3 rounded-lg shadow-lg'><i class="fa-solid fa-cloud-arrow-up mr-2"></i> Follow </button>
                             <button className='hidden text-xs md:text-sm font-medium border-orange-600 border text-orange-600 px-5 md:px-6 py-3 rounded-lg shadow-lg'><i class="fa-solid fa-cloud-arrow-up mr-2"></i> UnFollow</button>
                         </div>
                     </div>
+
+                    {UploadCoverPhoto && (
+                        <CoverPhotoUpload showUploadCoverPhoto={showUploadCoverPhoto} />
+                    )
+                    }
+
+                    {editProfile && (
+                        <EditProfile showEditProfile={showEditProfile} />
+                    )
+                    }
                 </section>
 
 
@@ -72,12 +98,12 @@ export const Profile = () => {
                         <button className='text-center font-semibold bg-orange-600  text-white p-4 w-full rounded-xl shadow shadow-orange-300'>Edit Details</button>
                     </div>
 
-                    <div  className='w-full md:w-3/5'>
-                        <Feeds/>
+                    <div className='w-full md:w-3/5'>
+                        <Feeds />
                     </div>
 
-                    <div  className='w-1/5 h-max hidden xl:block'>
-                        <Activity/>
+                    <div className='w-1/5 h-max hidden xl:block'>
+                        <Activity />
                     </div>
                 </section>
             </section>
