@@ -49,7 +49,7 @@ export const ChatProfile = (props) => {
     return (
         <>
 
-            <div className={` backdrop-blur-lg w-full overflow-y-scroll md:w-80 xl:w-1/4 md:h-full bg-white/30 mt-5 min-h-screen space-y-6 inset-y-0 right-0 top-0 2xl:top-12  shadow-2xl transform fixed transition duration-300 ease-in-out z-40 ${acc ? "translate-x-0" : "translate-x-full"}`}>
+            <div className={` backdrop-blur-lg w-full overflow-y-scroll md:w-80 xl:w-1/4 md:h-full bg-white/30 mt-5 min-h-screen space-y-6 inset-y-0 right-0 top-0 2xl:top-12  shadow-2xl transform fixed transition duration-300 ease-in-out z-40 pb-16 ${acc ? "translate-x-0" : "translate-x-full"}`}>
 
                 <div className="border-b py-2 bg-white">
                     <div className="items-center flex flex-wrap px-6 justify-between">
@@ -107,11 +107,6 @@ export const ChatProfile = (props) => {
                             <div hidden={expanded !== 'panel1'} className="shadow text-xs bg-white py-5 px-4 z-40 rounded-md space-y-2.5 ">
                                 <p>No Documents for now</p>
                             </div>
-
-
-
-
-
 
                             <div className="flex justify-between items-center cursor-pointer" onClick={() => handleChangeAcc("panel2")}>
                                 <div className="flex items-center gap-4">

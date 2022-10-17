@@ -60,10 +60,10 @@ export const ChatSection = () => {
                         </div>
                     </div>
 
-                    <div className='flex items-center gap-4 text-slate-500'>
-                        <button><i class="fa-solid fa-phone"></i></button>
-                        <button><i class="fa-solid fa-video"></i></button>
-                        <button onClick={handleAcc}><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    <div className='flex items-center gap-3 lg:gap-10 text-slate-500'>
+                        <button className='bg-slate-100 px-2 py-1 rounded-xl'><i class="fa-solid fa-phone"></i></button>
+                        <button className='bg-slate-100 px-2 py-1 rounded-xl'><i class="fa-solid fa-video"></i></button>
+                        <button className='bg-slate-100 px-2 py-1 rounded-xl' onClick={handleAcc}><i class="fa-solid fa-ellipsis-vertical"></i></button>
                     </div>
                 </div>
                 <div className='my-3'>
@@ -320,7 +320,7 @@ export const ChatSection = () => {
             </div>
 
 
-            <ChatProfile acc={acc} handleAcc={handleAcc}/>
+            <ChatProfile acc={acc} handleAcc={handleAcc} />
 
         </>
     )
