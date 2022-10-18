@@ -5,8 +5,9 @@ import { ActiveChats } from '../dashboard/activeChats'
 import img7 from '../../assets/img7.png'
 import img8 from '../../assets/img8.png'
 import img9 from '../../assets/img9.png'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ChatProfile } from './chatProfile'
+import { useLocation } from 'react-router-dom'
 
 
 export const ChatSection = () => {
@@ -40,6 +41,15 @@ export const ChatSection = () => {
         console.log("am clicked")
     }
 
+
+    const {pathname} = useLocation();
+
+    useEffect(() => {
+        window.scrollTo({
+            top: (0, 1000),
+            behavior: 'smooth'
+          });
+    }, [pathname]);
 
 
     return (
