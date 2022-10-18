@@ -15,6 +15,7 @@ import ScrollToTop from './scrollToTop';
 
 import Media from 'react-media';
 import { Profile } from './views/Profile/profile';
+import { Settings } from './views/settings/settings';
 
 
 
@@ -40,11 +41,9 @@ function App() {
                 <Route path="notification" element={<Notification />}></Route>
                 <Route path="message" element={<MessageHome />}></Route>
                 <Route path="pmessage" element={<ChatSection />}></Route>
-                <Route path='profile' element={<Profile/>}></Route>
+                <Route path='profile' element={<Profile />}></Route>
+                <Route path="settings" element={<Settings />}></Route>
               </Route>
-
-
-
 
               <Route path="*" element={<Errorpage />}></Route>
             </Routes>
@@ -64,14 +63,12 @@ function App() {
                 <Route path="message" element={<MessageHome />}>
                   <Route index element={<ChatSection />}></Route>
                 </Route>
-                <Route path='profile' element={<Profile/>}></Route>
+                <Route path='profile' element={<Profile />}></Route>
+                <Route path="settings" element={<Settings />}></Route>
               </Route>
 
 
-
-
-
-              <Route path="dashboard/pmessage" element={<Navigate to="/dashboard/message"/>}></Route>
+              {/* <Route path="dashboard/pmessage" element={<Navigate to="/dashboard/message" />}></Route> */}
               <Route path="*" element={<Errorpage />}></Route>
             </Routes>
           )
