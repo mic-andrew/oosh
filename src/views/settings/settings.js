@@ -21,13 +21,6 @@ export const Settings = () => {
         setActive(value);
     };
 
-    //for dropdown options
-    const [drop, setDrop] = useState("drops");
-
-    const handledrop = (e) => {
-        setDrop(e);
-    };
-
 
     return (
         <>

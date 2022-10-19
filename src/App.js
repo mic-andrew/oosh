@@ -16,6 +16,7 @@ import ScrollToTop from './scrollToTop';
 import Media from 'react-media';
 import { Profile } from './views/Profile/profile';
 import { Settings } from './views/settings/settings';
+import { Group } from './views/groups/group';
 
 
 
@@ -43,6 +44,8 @@ function App() {
                 <Route path="pmessage" element={<ChatSection />}></Route>
                 <Route path='profile' element={<Profile />}></Route>
                 <Route path="settings" element={<Settings />}></Route>
+                <Route path="settings" element={<Settings />}></Route>
+                <Route path="group" element={<Group />}></Route>
               </Route>
 
               <Route path="*" element={<Errorpage />}></Route>
@@ -65,6 +68,7 @@ function App() {
                 </Route>
                 <Route path='profile' element={<Profile />}></Route>
                 <Route path="settings" element={<Settings />}></Route>
+                <Route path="group" element={<Group />}></Route>
               </Route>
 
 
