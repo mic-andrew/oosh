@@ -2,7 +2,13 @@ import { useState } from "react";
 
 
 import { Link } from "react-router-dom";
+import { ActivityLog } from "./activityLog";
+import { BlockUser } from "./blockUser";
 import { EditProfile } from "./editprofile";
+import { Language } from "./language";
+import { Notification } from "./notification";
+import { Security } from "./security";
+import { Sharing } from "./sharing";
 
 
 export const Settings = () => {
@@ -27,11 +33,11 @@ export const Settings = () => {
         <>
 
             <section
-                className="md:mx-12 shadow-md rounded-xl bg-white"
+                className="md:mx-12 shadow shadow-slate-400 rounded-lg bg-white"
             >
 
-                <div className="block lg:flex flex-wrap">
-                    <div className="lg:w-80 bg-gray-100 flex flex-wrap lg:block justify-between">
+                <div className="block xl:flex flex-wrap">
+                    <div className="xl:w-80 bg-gray-100 flex flex-wrap xl:block justify-between">
                         <div className="">
                             <button
                                 onClick={() => handleChange("tab1")}
@@ -111,31 +117,31 @@ export const Settings = () => {
 
                     <div className="flex-1">
                         <div hidden={active !== "tab1"}>
-                            <EditProfile/>
+                            <EditProfile />
                         </div>
 
                         <div hidden={active !== "tab2"}>
-                            2
+                            <Language/>
                         </div>
 
                         <div hidden={active !== "tab3"}>
-                            3
+                            <BlockUser/>
                         </div>
 
                         <div hidden={active !== "tab4"}>
-                            4
+                            <Notification />
                         </div>
 
                         <div hidden={active !== "tab5"}>
-                            5
+                            <Security/>
                         </div>
 
                         <div hidden={active !== "tab6"}>
-6
+                            <ActivityLog />
                         </div>
 
                         <div hidden={active !== "tab7"}>
-                            7
+                            <Sharing />
                         </div>
                     </div>
                 </div>

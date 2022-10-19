@@ -9,7 +9,7 @@ export const EditProfile = () => {
     return (
         <>
             <section className="p-8">
-                <h2 className="text-2xl font-bold">Edit Profile</h2>
+                <h2 className="text-2xl font-bold text-orange-600">Edit Profile</h2>
 
 
                 <div className='py-8'>
