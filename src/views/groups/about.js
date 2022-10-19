@@ -10,12 +10,12 @@ export const About = () => {
             <section className="space-y-8">
                 <section className='shadow shadow-slate-400 rounded-lg'>
                     <div className='border-b py-4   px-4 md:px-6 2xl:px-8'>
-                        <p className='md:text-2xl font-bold'>About this group</p>
+                        <p className='text-lg md:text-2xl font-bold'>About this group</p>
                     </div>
 
                     <div className="py-4 px-4 md:px-6 2xl:px-8">
-                        <h2 className="text-2xl font-semibold">Goals/objectives of lilmow Connect </h2>
-                        <p>To help people help each other by providing Peer Support</p>
+                        <h2 className="text-base md:text-2xl font-semibold">Goals/objectives of lilmow Connect </h2>
+                        <p className='text-sm md:text-base'>To help people help each other by providing Peer Support</p>
 
                         <div>
                             <div className="flex gap-3 items-center space-y-4">
@@ -26,7 +26,7 @@ export const About = () => {
                                     </svg>
                                 </div>
                                 <div>
-                                    <p className="text-lg font-bold">Public</p>
+                                    <p className="md:text-lg font-bold">Public</p>
                                     <p className="text-sm">Anyone can see who’s in the group</p>
                                 </div>
                             </div>
@@ -39,7 +39,7 @@ export const About = () => {
                                     </svg>
                                 </div>
                                 <div>
-                                    <p className="text-lg font-bold">Visible</p>
+                                    <p className="md:text-lg font-bold">Visible</p>
                                     <p className="text-sm">Anyone can see who’s in the group.</p>
                                 </div>
                             </div>
@@ -49,7 +49,7 @@ export const About = () => {
                                     <i class="fa-solid fa-users"></i>
                                 </div>
                                 <div>
-                                    <p className="text-lg font-bold">General</p>
+                                    <p className="md:text-lg font-bold">General</p>
                                     <p className="text-sm">Anyone can find this group.</p>
                                 </div>
                             </div>
@@ -59,7 +59,7 @@ export const About = () => {
                                     <i class="fa-solid fa-clock-rotate-left"></i>
                                 </div>
                                 <div>
-                                    <p className="text-lg font-bold">History</p>
+                                    <p className="md:text-lg font-bold">History</p>
                                     <p className="text-sm">Group created on march 26, 2022</p>
                                 </div>
                             </div>
@@ -72,17 +72,39 @@ export const About = () => {
 
                 <section className='shadow shadow-slate-400 rounded-lg'>
                     <div className='border-b py-4   px-4 md:px-6 2xl:px-8'>
-                        <p className='md:text-2xl font-bold'>Members 1094</p>
+                        <p className='text-lg md:text-2xl font-bold'>Members 1094</p>
                     </div>
 
                     <div className="py-4 px-4 md:px-6 2xl:px-8 space-y-4">
                         <div className="flex gap-5">
-                            <div><img src={img8} alt="image" className="rounded-full"/></div>
-                            <div><img src={img7} alt="image" className="rounded-full"/></div>
-                            <div><img src={img9} alt="image" className="rounded-full"/></div>
+                            <div><img src={img8} alt="image" className="rounded-full" /></div>
+                            <div><img src={img7} alt="image" className="rounded-full" /></div>
+                            <div><img src={img9} alt="image" className="rounded-full" /></div>
                         </div>
-                        <p className='text-lg font-semibold'>Ayo and lilmow are admins. Emmalu is a moderarator</p>
+                        <p className='text-base md:text-lg font-semibold'>Ayo and lilmow are admins. Emmalu is a moderarator</p>
                         <button className='text-white bg-orange-600 px-6 py-3 rounded-lg  w-40'>See all</button>
+                    </div>
+                </section>
+
+
+                <section className='shadow shadow-slate-400 rounded-lg'>
+                    <div className='border-b py-4   px-4 md:px-6 2xl:px-8'>
+                        <p className='text-lg md:text-2xl font-bold'>Activity</p>
+                    </div>
+
+                    <div className="py-4 px-4 md:px-6 2xl:px-8 space-y-4">
+                        <div className='flex gap-3'>
+                            <div><i class="fa-solid fa-file-circle-plus"></i></div>
+                            <div><p className='font-semibold'>4 new posts today</p></div>
+                        </div>
+                        <div className='flex gap-3'>
+                            <div><i class="fa-solid fa-users"></i></div>
+                            <div><p className='font-semibold'>+200 memebers in the last  week</p></div>
+                        </div>
+                        <div className='flex gap-3'>
+                            <div><i class="fa-solid fa-users-rectangle"></i></div>
+                            <div><p className='font-semibold'>+200 memebers in the last  week</p></div>
+                        </div>
                     </div>
                 </section>
 

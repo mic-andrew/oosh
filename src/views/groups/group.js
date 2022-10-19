@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import gcv from '../../assets/gcv.jpg'
 import { About } from './about';
+import { Post } from './posts';
 
 
 
@@ -116,7 +117,7 @@ export const Group = () => {
                     </div>
 
                     <div hidden={active !== "tab2"}>
-                        2
+                        <Post/>
                     </div>
 
                     <div hidden={active !== "tab3"}>
