@@ -1,7 +1,10 @@
 import { useState } from 'react';
 import gcv from '../../assets/gcv.jpg'
 import { About } from './about';
+import { People } from './people';
+import { Photo } from './photo';
 import { Post } from './posts';
+import { Videos } from './videos';
 
 
 
@@ -13,9 +16,18 @@ export const Group = () => {
 
     const handleChange = (value) => {
         setActive(value);
+
+        if (value === "tab5" || value === "tab6"){
+            showMedia();
+        }
     };
 
 
+    const [media, setMedia] = useState(false);
+
+    const showMedia = () => {
+        setMedia(!media)
+    }
 
 
 
@@ -96,15 +108,22 @@ export const Group = () => {
                         </button>
                     </div>
 
-                    <div className="">
+                    <div className=" relative">
                         <button
-                            onClick={() => handleChange("tab5")}
+                            onClick={showMedia}
                             className={`px-2 md:px-4 hover:text-orange-600 hover:bg-slate-200 py-1 md:py-2 ${active === "tab5" ? "text-orange-600 " : ""}`} active={active === "tab5"}
                         >
                             <span className=" font-bold text-sm md:text-lg">
-                                Media
+                                Media <i class="fa-solid fa-caret-down ml-1"></i>
                             </span>
                         </button>
+                        {media && 
+                            <div className='absolute w-full shadow-lg bg-white p-4 space-y-3 font-semibold z-50'>
+                                <div onClick={() => handleChange("tab5")} className='cursor-pointer'>Photos</div>
+                                <div onClick={() => handleChange("tab6")} className='cursor-pointer'>Videos</div>
+                            </div>
+                        }
+
                     </div>
 
 
@@ -121,15 +140,19 @@ export const Group = () => {
                     </div>
 
                     <div hidden={active !== "tab3"}>
-                        3
+                        <People/>
                     </div>
 
                     <div hidden={active !== "tab4"}>
-                        4
+                        Coming Soon
                     </div>
 
                     <div hidden={active !== "tab5"}>
-                        5
+                        <Photo/>
+                    </div>
+
+                    <div hidden={active !== "tab6"}>
+                        <Videos/>
                     </div>
 
                 </div>

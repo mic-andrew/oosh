@@ -15,18 +15,19 @@ import pp5 from '../../assets/5.png'
 import pp6 from '../../assets/6.png'
 import { useState } from 'react'
 import { CreatePost } from '../../components/dashboard/createpost'
+import { CreateGroupPost } from '../../components/groups/createGroupPost'
 
 
 
 export const PostsFeeds = () => {
 
 
-    const [showCreatePst, setShowCreatePst] = useState(false);
+    const [showCreateGroupPst, setShowCreateGroupPst] = useState(false);
 
 
 
-    const showCreatePost = () => {
-       setShowCreatePst(!showCreatePst)
+    const showCreateGroupPost = () => {
+       setShowCreateGroupPst(!showCreateGroupPst)
     }
 
 
@@ -50,7 +51,7 @@ export const PostsFeeds = () => {
                                             <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
                                         </svg>
                                     </div>
-                                    <input onFocus={showCreatePost} className="w-full pl-8 py-3 text-sm text-gray-700 placeholder-gray-600 bg-gray-100 border-0 rounded-md dark:focus:shadow-outline-gray  focus:placeholder-gray-500 focus:bg-white focus:border-orange-300 focus:outline-none focus:shadow-outline-purple form-input" type="text" placeholder="Search for something here..." aria-label="Search" />
+                                    <input onFocus={showCreateGroupPost} className="w-full pl-8 py-3 text-sm text-gray-700 placeholder-gray-600 bg-gray-100 border-0 rounded-md dark:focus:shadow-outline-gray  focus:placeholder-gray-500 focus:bg-white focus:border-orange-300 focus:outline-none focus:shadow-outline-purple form-input" type="text" placeholder="Search for something here..." aria-label="Search" />
                                 </div>
                             </div>
                         </div>
@@ -78,8 +79,8 @@ export const PostsFeeds = () => {
                             <button className='bg-orange-600 text-white px-3 py-1 rounded'>Post</button>
                         </div>
                     </div>
-                    {showCreatePst && (
-                        <CreatePost showCreatePost={showCreatePost}/>
+                    {showCreateGroupPst && (
+                        <CreateGroupPost showCreateGroupPost={showCreateGroupPost}/>
                     )
                     }
                 </section>
