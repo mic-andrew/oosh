@@ -17,6 +17,7 @@ import Media from 'react-media';
 import { Profile } from './views/Profile/profile';
 import { Settings } from './views/settings/settings';
 import { Group } from './views/groups/group';
+import { Pages } from './views/pages/pages';
 
 
 
@@ -46,6 +47,7 @@ function App() {
                 <Route path="settings" element={<Settings />}></Route>
                 <Route path="settings" element={<Settings />}></Route>
                 <Route path="group" element={<Group />}></Route>
+                <Route path="pages" element={<Pages />}></Route>
               </Route>
 
               <Route path="*" element={<Errorpage />}></Route>
@@ -69,6 +71,7 @@ function App() {
                 <Route path='profile' element={<Profile />}></Route>
                 <Route path="settings" element={<Settings />}></Route>
                 <Route path="group" element={<Group />}></Route>
+                <Route path="pages" element={<Pages />}></Route>
               </Route>
 
 

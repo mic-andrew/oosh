@@ -9,7 +9,7 @@ export const Post = () => {
     return(
         <>
 
-            <section className="xl:flex gap-8">
+            <section className="xl:flex gap-8 space-y-6 xl:space-y-0">
 
                 <div className="xl:w-3/4">
                     <PostsFeeds/>

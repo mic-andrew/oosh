@@ -74,7 +74,7 @@ export const DashHeader = () => {
                                 </div>
 
                                 <div className="relative">
-                                    <NavLink to="path" onClick={toggleNav} className={({ isActive }) => (isActive ? "text-white bg-orange-600 font-medium inline-flex w-full text-sm md:text-base md:font-semibold transition-colors duration-150 px-6 py-3 rounded-tr-2xl rounded-br-2xl" : "px-6 py-3 inline-flex font-medium items-center w-full md:text-base md:font-semibold text-gray-500 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-500")}>
+                                    <NavLink to="pages" onClick={toggleNav} className={({ isActive }) => (isActive ? "text-white bg-orange-600 font-medium inline-flex w-full text-sm md:text-base md:font-semibold transition-colors duration-150 px-6 py-3 rounded-tr-2xl rounded-br-2xl" : "px-6 py-3 inline-flex font-medium items-center w-full md:text-base md:font-semibold text-gray-500 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-500")}>
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M3 8.25V18a2.25 2.25 0 002.25 2.25h13.5A2.25 2.25 0 0021 18V8.25m-18 0V6a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 6v2.25m-18 0h18M5.25 6h.008v.008H5.25V6zM7.5 6h.008v.008H7.5V6zm2.25 0h.008v.008H9.75V6z" />
                                         </svg>

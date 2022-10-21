@@ -279,7 +279,7 @@ export const ChatSection = () => {
                 </div>
             </div>
 
-            <div className='relative w-full '>
+            <div className='relative w-full mb-8'>
                 {
                     replyChat && (
                         <div className='bg-gray-200 rounded-lg absolute z-10 -top-20 py-4 px-10'>
@@ -292,7 +292,7 @@ export const ChatSection = () => {
                     )
                 }
 
-                <div className='absolute w-full'>
+                <div className='absolute w-full '>
                     <div className="flex gap-x-3 items-center justify-between pb-5 ">
                         <div className='flex-1'>
                             <div className="flex justify-center flex-1 items-center">
