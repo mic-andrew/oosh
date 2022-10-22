@@ -8,6 +8,7 @@ import img9 from '../../assets/img9.png'
 import { useEffect, useState } from 'react'
 import { ChatProfile } from './chatProfile'
 import { useLocation } from 'react-router-dom'
+import { IncomingCall } from '../../components/calls/incomingCall'
 
 
 export const ChatSection = () => {
@@ -15,8 +16,8 @@ export const ChatSection = () => {
 
     const [chatOpt, setchatOpt] = useState(false);
     const [replyChat, setreplyChat] = useState(false);
-    const [showProfile, setShowProfile] = useState(false)
-    const [acc, setAcc] = useState(false)
+    const [call, setCall] = useState(false)
+    const [sideProfile, setSideProfile] = useState(false)
 
 
     const showchatOpt = (value) => {
@@ -30,31 +31,31 @@ export const ChatSection = () => {
         setreplyChat(!replyChat);
     }
 
-    const showtheProfile = () => {
-        setShowProfile(!showProfile)
+    const handleSideProfile = () => {
+        setSideProfile(!sideProfile);
     }
 
 
-    // for more filter accordion
-    const handleAcc = () => {
-        setAcc(!acc);
-        console.log("am clicked")
+
+    const handleMakeCall = () => {
+        setCall(!call)
     }
 
 
-    const {pathname} = useLocation();
+
+
+    const { pathname } = useLocation();
 
     useEffect(() => {
         window.scrollTo({
             top: (0, 1000),
             behavior: 'smooth'
-          });
+        });
     }, [pathname]);
 
 
     return (
         <>
-
 
 
             <div className=''>
@@ -71,15 +72,19 @@ export const ChatSection = () => {
                     </div>
 
                     <div className='flex items-center gap-3 lg:gap-10 text-slate-500'>
-                        <button className='bg-slate-100 px-2 py-1 rounded-xl'><i class="fa-solid fa-phone"></i></button>
+                        <button className='bg-slate-100 px-2 py-1 rounded-xl' onClick={handleMakeCall}><i class="fa-solid fa-phone"></i></button>
                         <button className='bg-slate-100 px-2 py-1 rounded-xl'><i class="fa-solid fa-video"></i></button>
-                        <button className='bg-slate-100 px-2 py-1 rounded-xl' onClick={handleAcc}><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                        <button className='bg-slate-100 px-2 py-1 rounded-xl' onClick={handleSideProfile}><i class="fa-solid fa-ellipsis-vertical"></i></button>
                     </div>
                 </div>
                 <div className='my-3'>
                     <p className='text-xs 2xl:text-lg font-semibold text-center'>March 06, 2022</p>
                 </div>
             </div>
+
+            {
+                call && (<IncomingCall handleMakeCall={handleMakeCall}/>)
+            }
 
 
             <div className='overflow-y-scroll h-[80%] space-y-6 w-full py-5'>
@@ -330,7 +335,9 @@ export const ChatSection = () => {
             </div>
 
 
-            <ChatProfile acc={acc} handleAcc={handleAcc} />
+
+
+            <ChatProfile sideProfile={sideProfile} handleSideProfile={handleSideProfile} />
 
         </>
     )

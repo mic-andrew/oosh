@@ -30,7 +30,7 @@ import img3 from '../../assets/img3.jpg'
 export const ChatProfile = (props) => {
 
 
-    let { handleAcc, acc } = props;
+    let { handleSideProfile, sideProfile } = props;
 
 
     // accordion
@@ -49,12 +49,12 @@ export const ChatProfile = (props) => {
     return (
         <>
 
-            <div className={` backdrop-blur-lg w-full overflow-y-scroll md:w-80 xl:w-1/4 md:h-full bg-white/30 mt-5 min-h-screen space-y-6 inset-y-0 right-0 top-0 2xl:top-12  shadow-2xl transform fixed transition duration-300 ease-in-out z-40 pb-16 ${acc ? "translate-x-0" : "translate-x-full"}`}>
+            <div className={` backdrop-blur-lg w-full overflow-y-scroll md:w-80 xl:w-1/4 md:h-full bg-white/30 mt-5 min-h-screen space-y-6 inset-y-0 right-0 top-0 2xl:top-12  shadow-2xl transform fixed transition duration-300 ease-in-out z-40 pb-16 ${sideProfile ? "translate-x-0" : "translate-x-full"}`}>
 
                 <div className="border-b py-2 bg-white">
                     <div className="items-center flex flex-wrap px-6 justify-between">
                         <h2 className="text-base font-bold">User Profile</h2>
-                        <button onClick={handleAcc} className="bg-slate-50 rounded px-6 py-2.5 shadow shadow-slate-400 text-orange-600"><i className="text-base fa-solid fa-xmark"></i></button>
+                        <button onClick={handleSideProfile} className="bg-slate-50 rounded px-6 py-2.5 shadow shadow-slate-400 text-orange-600"><i className="text-base fa-solid fa-xmark"></i></button>
                     </div>
                 </div>
 

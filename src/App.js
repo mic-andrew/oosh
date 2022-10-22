@@ -75,7 +75,7 @@ function App() {
               </Route>
 
 
-              {/* <Route path="dashboard/pmessage" element={<Navigate to="/dashboard/message" />}></Route> */}
+              <Route path="dashboard/pmessage" element={<Navigate to="/dashboard/message" />}></Route>
               <Route path="*" element={<Errorpage />}></Route>
             </Routes>
           )
