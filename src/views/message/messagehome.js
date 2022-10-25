@@ -13,7 +13,7 @@ export const MessageHome = () => {
         <>
 
             <main>
-                <section className="xl:flex gap-10 ">
+                <div className="xl:flex gap-10 relative">
 
                     <section className="hidden xl:block fixed xl:h-[85%] xl:w-1/5 shadow shadow-slate-400 rounded-lg py-4  px-4 md:px-6 2xl:px-4">
                         <div className="flex gap-2 justify-between items-center">
@@ -245,10 +245,10 @@ export const MessageHome = () => {
                         <MobileActiveChat />
                     </section>
 
-                    <section className="hidden xl:block fixed h-screen xl:h-[85%]  xl:w-[55%] xl:ml-[22%] xl:mt-0 shadow shadow-slate-400 rounded-lg py-4 px-2 xl:px-8 ">
+                    <section className="hidden xl:block relative  h-[90%]  flex-1  xl:ml-[28%] xl:mt-0 shadow shadow-slate-400 rounded-lg py-4 px-2 xl:px-8 ">
                         <ChatSection />
                     </section>
-                </section>  
+                </div>  
             </main>
 
         </>

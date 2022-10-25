@@ -4,10 +4,12 @@ import img9 from '../../assets/img9.png'
 import img8 from '../../assets/img8.png'
 import { useState } from 'react'
 
+import vc from '../../assets/vc.png'
 
 
 
-export const OngoingCall = (props) => {
+
+export const VideoCall = (props) => {
 
     let { handleMakeCall } = props;
 
@@ -34,12 +36,12 @@ export const OngoingCall = (props) => {
         <>
 
             <div className="absolute top-0 left-0" >
-                <div className="inset-0 fixed bg-slate-800 w-screen z-50 h-screen bg-opacity-60 flex items-center px-3">
+                <div className="inset-0 fixed bg-slate-800 w-screen z-40 h-screen bg-opacity-60 flex items-center px-3">
 
                     <div className="shadow shadow-slate-400 rounded-lg space-y-4 overflow-y-scroll h-[90%] xl:h-[80%] bg-white mx-auto w-full lg:w-2/3 xl:w-5/6 2xl:w-2/3">
                         <div className="flex justify-between items-center  2xl:px-8  border-b py-4  px-4 md:px-6">
-                            <div>
-                                <h2 className="text-sm 2xl:text-xl font-bold">Ongoing Call</h2>
+                            <div >
+                                <h2 className="text-sm 2xl:text-xl font-bold">Ongoing Video Call</h2>
                             </div>
 
                             <div>
@@ -51,35 +53,39 @@ export const OngoingCall = (props) => {
                             <div className='xl:flex gap-8 justify-between xl:fixed xl:w-[75%] 2xl:w-[62%]'>
 
 
-                                <div className='w-full xl:w-2/3 '>
-
-                                    <div className='flex justify-between'>
-                                        <div className='bg-slate-200 py-3.5 h-11 px-6 rounded-lg'>
-                                            <p className='text-sm font-bold'><i class="fa-solid fa-circle text-red-500 w-3 mr-2 text-right"></i> 00:50</p>
+                                <div className='w-full xl:w-2/3 relative' >
+                                    <div className='relative  z-[100]'>
+                                        <div className='flex justify-between '>
+                                            <div className='bg-slate-200 py-3.5 h-11 px-6 rounded-lg'>
+                                                <p className='text-sm font-bold'><i class="fa-solid fa-circle text-red-500 w-3 mr-2 text-right"></i> 00:50</p>
+                                            </div>
+                                            <div>
+                                                <img src={caller} alt="image" className='w-36 xl:w-full rounded-xl border-2 border-white' />
+                                            </div>
                                         </div>
-                                        <div>
-                                            <img src={caller} alt="image" className='w-36 xl:w-full rounded-xl' />
+
+                                        <div className='space-y-4 mt-14 invisible'>
+                                            <div>
+                                                <img src={dp} alt="image" className='w-24 xl:w-28 rounded-full mx-auto' />
+                                            </div>
+
+                                            <div className='text-center'>
+                                                <h2 className='text-2xl font-bold'>David Adedamola</h2>
+                                                <p className=' font-medium'>Calling</p>
+                                            </div>
+                                        </div>
+
+                                        <div className='flex gap-6 justify-center 2xl:mt-36 mt-24 mb-12 xl:mb-6 '>
+                                            <div className='bg-slate-200  rounded-full w-16 h-16 text-xl shadow-xl flex items-center justify-center '><i class="fa-solid fa-message"></i></div>
+                                            <div className='bg-red-500 text-white rounded-full w-16 h-16 text-xl shadow-xl flex items-center justify-center'><i class="fa-solid fa-phone rotate-90"></i></div>
+                                            <div className='bg-slate-200  rounded-full w-16 h-16 text-xl shadow-xl flex items-center justify-center '><i class="fa-solid fa-microphone-slash"></i></div>
+                                            <div className='bg-slate-200  rounded-full w-16 h-16 text-xl shadow-xl flex items-center justify-center '><i class="fa-solid fa-record-vinyl"></i></div>
                                         </div>
                                     </div>
 
-                                    <div className='space-y-4 mt-14 '>
-                                        <div>
-                                            <img src={dp} alt="image" className='w-24 xl:w-28 rounded-full mx-auto' />
-                                        </div>
-
-                                        <div className='text-center'>
-                                            <h2 className='text-2xl font-bold'>David Adedamola</h2>
-                                            <p className=' font-medium'>Calling</p>
-                                        </div>
+                                    <div className=''>
+                                        <img src={vc} alt="image" className='object-cover h-[65%] absolute top-0  z-10 rounded-xl' />
                                     </div>
-
-                                    <div className='flex gap-6 justify-center 2xl:mt-36 mt-24 mb-12 xl:mb-6'>
-                                        <div className='bg-slate-200  rounded-full w-16 h-16 text-xl shadow-xl flex items-center justify-center '><i class="fa-solid fa-message"></i></div>
-                                        <div className='bg-red-500 text-white rounded-full w-16 h-16 text-xl shadow-xl flex items-center justify-center'><i class="fa-solid fa-phone rotate-90"></i></div>
-                                        <div className='bg-slate-200  rounded-full w-16 h-16 text-xl shadow-xl flex items-center justify-center '><i class="fa-solid fa-microphone-slash"></i></div>
-                                        <div className='bg-slate-200  rounded-full w-16 h-16 text-xl shadow-xl flex items-center justify-center '><i class="fa-solid fa-record-vinyl"></i></div>
-                                    </div>
-
 
                                 </div>
 

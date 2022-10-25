@@ -69,7 +69,7 @@ export const Pages = () => {
 
 
             <section className='my-8 space-y-6'>
-                <div className=" flex flex-wrap border-b border-t py-2 md:gap-6">
+                <div className=" flex flex-wrap border-b border-t py-2 gap-4 md:gap-6">
 
                     <div className="">
                         <button
@@ -77,7 +77,7 @@ export const Pages = () => {
                             className={`px-2 md:px-4 hover:text-orange-600 hover:bg-slate-200 py-1 md:py-2 ${active === "tab1" ? "text-orange-600 " : ""}`}
                             active={active === "tab1"}
                         >
-                            <span className=" font-bold text-sm md:text-lg">
+                            <span className=" font-bold md:text-lg">
                                 About
                             </span>
                         </button>
@@ -88,7 +88,7 @@ export const Pages = () => {
                             onClick={() => handleChange("tab2")}
                             className={`px-2 md:px-4 hover:text-orange-600 hover:bg-slate-200 py-1 md:py-2 ${active === "tab2" ? "text-orange-600" : ""}`} active={active === "tab2"}
                         >
-                            <span className=" font-bold text-sm md:text-lg">
+                            <span className=" font-bold md:text-lg">
                                 Post
                             </span>
                         </button>
@@ -99,7 +99,7 @@ export const Pages = () => {
                             onClick={() => handleChange("tab3")}
                             className={`px-2 md:px-4 hover:text-orange-600 hover:bg-slate-200 py-1 md:py-2 ${active === "tab3" ? "text-orange-600 " : ""}`} active={active === "tab3"}
                         >
-                            <span className=" font-bold text-sm md:text-lg">
+                            <span className=" font-bold md:text-lg">
                                 Live
                             </span>
                         </button>
@@ -110,12 +110,12 @@ export const Pages = () => {
                             onClick={showMedia}
                             className={`px-2 md:px-4 hover:text-orange-600 hover:bg-slate-200 py-1 md:py-2 ${active === "tab5" ? "text-orange-600 " : ""}`} active={active === "tab5"}
                         >
-                            <span className=" font-bold text-sm md:text-lg">
+                            <span className=" font-bold md:text-lg">
                                 Media <i class="fa-solid fa-caret-down ml-1"></i>
                             </span>
                         </button>
                         {media &&
-                            <div className='absolute w-full shadow-lg bg-white p-4 space-y-3 font-semibold z-50'>
+                            <div className='absolute w-full shadow-lg bg-white p-6 xl:p-4 space-y-3 font-semibold z-50'>
                                 <div onClick={() => handleChange("tab5")} className='cursor-pointer'>Photos</div>
                                 <div onClick={() => handleChange("tab6")} className='cursor-pointer'>Videos</div>
                             </div>
