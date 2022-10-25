@@ -11,7 +11,7 @@ import vc from '../../assets/vc.png'
 
 export const VideoCall = (props) => {
 
-    let { handleMakeCall } = props;
+    let { handleVideoCall } = props;
 
 
     const [chatOpt, setchatOpt] = useState(false);
@@ -38,14 +38,14 @@ export const VideoCall = (props) => {
             <div className="absolute top-0 left-0" >
                 <div className="inset-0 fixed bg-slate-800 w-screen z-40 h-screen bg-opacity-60 flex items-center px-3">
 
-                    <div className="shadow shadow-slate-400 rounded-lg space-y-4 overflow-y-scroll h-[90%] xl:h-[80%] bg-white mx-auto w-full lg:w-2/3 xl:w-5/6 2xl:w-2/3">
+                    <div className="shadow shadow-slate-400 rounded-lg space-y-4 overflow-y-scroll h-[90%] xl:h-[85%] bg-white mx-auto w-full lg:w-2/3 xl:w-5/6 2xl:w-2/3">
                         <div className="flex justify-between items-center  2xl:px-8  border-b py-4  px-4 md:px-6">
                             <div >
                                 <h2 className="text-sm 2xl:text-xl font-bold">Ongoing Video Call</h2>
                             </div>
 
                             <div>
-                                <button onClick={handleMakeCall} className="text-orange-600 text-lg 2xl:text-2xl"><i class="fa-solid fa-circle-xmark"></i></button>
+                                <button onClick={handleVideoCall} className="text-orange-600 text-lg 2xl:text-2xl"><i class="fa-solid fa-circle-xmark"></i></button>
                             </div>
                         </div>
 
@@ -80,6 +80,8 @@ export const VideoCall = (props) => {
                                             <div className='bg-red-500 text-white rounded-full w-16 h-16 text-xl shadow-xl flex items-center justify-center'><i class="fa-solid fa-phone rotate-90"></i></div>
                                             <div className='bg-slate-200  rounded-full w-16 h-16 text-xl shadow-xl flex items-center justify-center '><i class="fa-solid fa-microphone-slash"></i></div>
                                             <div className='bg-slate-200  rounded-full w-16 h-16 text-xl shadow-xl flex items-center justify-center '><i class="fa-solid fa-record-vinyl"></i></div>
+                                            <div className='bg-slate-200  rounded-full w-16 h-16 text-xl shadow-xl flex items-center justify-center '><i class="fa-solid fa-camera"></i></div>
+                                            <div className='bg-slate-200  rounded-full w-16 h-16 text-xl shadow-xl flex items-center justify-center '><i class="fa-solid fa-video"></i></div>
                                         </div>
                                     </div>
 
@@ -127,7 +129,7 @@ export const VideoCall = (props) => {
                                                 {
                                                     chatOpt && (
 
-                                                        <div className='absolute shadow bg-white shadow-slate-400 rounded-lg z-20 right-1 md:right-auto py-2 top-5 2xl:ml-2 '>
+                                                        <div className='absolute shadow bg-white shadow-slate-400 rounded-lg z-20 right-1 md:right-5 py-2 top-5 2xl:ml-2 '>
                                                             <div className='px-5 py-2 text-xs 2xl:text-base' onClick={() => showchatOpt("reply")}><button>Reply</button></div>
                                                             <div className='px-5 py-2 text-xs 2xl:text-base'><button>Forward</button></div>
                                                             <div className='px-5 py-2 text-xs 2xl:text-base'><button>Delete</button></div>
@@ -160,7 +162,7 @@ export const VideoCall = (props) => {
                                                 {
                                                     chatOpt && (
 
-                                                        <div className='absolute shadow bg-white shadow-slate-400 rounded-lg z-20 right-1 md:right-auto py-2 top-5 2xl:ml-2'>
+                                                        <div className='absolute shadow bg-white shadow-slate-400 rounded-lg z-20 right-1 md:right-5 py-2 top-5 2xl:ml-2'>
                                                             <div className='px-5 py-2 text-xs 2xl:text-base' onClick={showchatOpt}><button>Reply</button></div>
                                                             <div className='px-5 py-2 text-xs 2xl:text-base'><button>Forward</button></div>
                                                             <div className='px-5 py-2 text-xs 2xl:text-base'><button>Delete</button></div>
@@ -257,8 +259,8 @@ export const VideoCall = (props) => {
                                                 {
                                                     chatOpt && (
 
-                                                        <div className='absolute shadow bg-white shadow-slate-400 rounded-lg z-20 right-1 md:right-auto py-2 top-5 2xl:ml-2'>
-                                                            <div className='px-5 py-2 text-xs 2xl:text-base' onClick={showchatOpt}><button>Reply</button></div>
+                                                        <div className='absolute shadow bg-white shadow-slate-400 rounded-lg z-20 right-1 md:right-5 py-2 top-5 2xl:ml-2'>
+                                                            <div className='px-5 py-2 text-xs 2xl:text-base' onClick={() => showchatOpt("reply")}><button>Reply</button></div>
                                                             <div className='px-5 py-2 text-xs 2xl:text-base'><button>Forward</button></div>
                                                             <div className='px-5 py-2 text-xs 2xl:text-base'><button>Delete</button></div>
                                                         </div>

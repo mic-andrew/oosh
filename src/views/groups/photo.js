@@ -13,7 +13,7 @@ export const Photo = () => {
                 <h2 className='text-xl font-bold mb-5'>Photos</h2>
 
                 
-                <section className='grid grid-cols-4 gap-4'>
+                <section className='space-y-3 md:space-y-0 md:grid grid-cols-4 gap-4'>
                     <div><img src={img1} alt="image" className='' /></div>
                     <div><img src={img2} alt="image" className='' /></div>
                     <div><img src={img3} alt="image" className='' /></div>

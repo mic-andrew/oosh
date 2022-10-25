@@ -36,7 +36,7 @@ export const OngoingCall = (props) => {
             <div className="absolute top-0 left-0" >
                 <div className="inset-0 fixed bg-slate-800 w-screen z-50 h-screen bg-opacity-60 flex items-center px-3">
 
-                    <div className="shadow shadow-slate-400 rounded-lg space-y-4 overflow-y-scroll h-[90%] xl:h-[80%] bg-white mx-auto w-full lg:w-2/3 xl:w-5/6 2xl:w-2/3">
+                    <div className="shadow shadow-slate-400 rounded-lg space-y-4 overflow-y-scroll h-[90%] xl:h-[85%] bg-white mx-auto w-full lg:w-2/3 xl:w-5/6 2xl:w-2/3">
                         <div className="flex justify-between items-center  2xl:px-8  border-b py-4  px-4 md:px-6">
                             <div>
                                 <h2 className="text-sm 2xl:text-xl font-bold">Ongoing Call</h2>

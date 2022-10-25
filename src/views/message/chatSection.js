@@ -96,10 +96,8 @@ export const ChatSection = () => {
             }
 
             {
-                videoCall && (<VideoCall handleMakeCall={handleMakeCall} />)
+                videoCall && (<VideoCall handleVideoCall={handleVideoCall} />)
             }
-
-
 
 
 
@@ -447,7 +445,6 @@ export const ChatSection = () => {
                         </div>
                     </div>
                 </div>
-
             </div>
 
 

@@ -115,7 +115,7 @@ export const Pages = () => {
                             </span>
                         </button>
                         {media &&
-                            <div className='absolute w-full shadow-lg bg-white p-6 xl:p-4 space-y-3 font-semibold z-50'>
+                            <div className='absolute shadow-lg bg-white p-6 xl:p-4 space-y-3 font-semibold z-50'>
                                 <div onClick={() => handleChange("tab5")} className='cursor-pointer'>Photos</div>
                                 <div onClick={() => handleChange("tab6")} className='cursor-pointer'>Videos</div>
                             </div>
