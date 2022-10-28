@@ -19,6 +19,8 @@ import { Settings } from './views/settings/settings';
 import { Group } from './views/groups/group';
 import { Pages } from './views/pages/pages';
 import { Explore } from './views/explore/explore';
+import { Technology } from './views/explore/technology';
+import { Events } from './views/explore/events';
 
 
 
@@ -50,6 +52,8 @@ function App() {
                 <Route path="group" element={<Group />}></Route>
                 <Route path="pages" element={<Pages />}></Route>
                 <Route path="explore" element={<Explore />}></Route>
+                <Route path="explore/Technology" element={<Technology />}></Route>
+                <Route path="events" element={<Events />}></Route>
               </Route>
 
               <Route path="*" element={<Errorpage />}></Route>
@@ -75,6 +79,9 @@ function App() {
                 <Route path="group" element={<Group />}></Route>
                 <Route path="pages" element={<Pages />}></Route>
                 <Route path="explore" element={<Explore />}></Route>
+                <Route path="explore" element={<Explore />}></Route>
+                <Route path="Technology" element={<Technology />}></Route>
+                <Route path="events" element={<Events />}></Route>
               </Route>
 
 
