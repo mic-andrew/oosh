@@ -52,7 +52,7 @@ function App() {
                 <Route path="group" element={<Group />}></Route>
                 <Route path="pages" element={<Pages />}></Route>
                 <Route path="explore" element={<Explore />}></Route>
-                <Route path="explore/Technology" element={<Technology />}></Route>
+                <Route path="explore" element={<Technology />}></Route>
                 <Route path="events" element={<Events />}></Route>
               </Route>
 
