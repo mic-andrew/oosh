@@ -15,6 +15,7 @@ import pp5 from '../../assets/5.png'
 import pp6 from '../../assets/6.png'
 import { useState } from 'react'
 import { CreatePost } from '../../components/dashboard/createpost'
+import { Stories } from './stories/stories'
 
 
 
@@ -26,7 +27,7 @@ export const Feeds = () => {
 
 
     const showCreatePost = () => {
-       setShowCreatePst(!showCreatePst)
+        setShowCreatePst(!showCreatePst)
     }
 
 
@@ -35,6 +36,9 @@ export const Feeds = () => {
 
     return (
         <>
+
+
+
             <section className='space-y-6'>
                 <section className=' shadow shadow-slate-400 rounded-lg py-4  px-4 md:px-6 2xl:px-8 space-y-4'>
                     <div className="flex space-x-6 items-center justify-center">
@@ -79,12 +83,14 @@ export const Feeds = () => {
                         </div>
                     </div>
                     {showCreatePst && (
-                        <CreatePost showCreatePost={showCreatePost}/>
+                        <CreatePost showCreatePost={showCreatePost} />
                     )
                     }
                 </section>
 
-
+                <div >
+                    <Stories />
+                </div>
 
 
                 <section className='shadow shadow-slate-400 rounded-lg py-4  px-4 md:px-6 2xl:px-8 space-y-4'>

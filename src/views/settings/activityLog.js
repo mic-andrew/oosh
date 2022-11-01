@@ -8,7 +8,6 @@ export const ActivityLog = () => {
             <section className="p-8">
                 <h2 className="text-2xl font-bold text-orange-600">Activity Log</h2>
 
-
                 <div className='py-8 space-y-6'>
                     <div className="flex gap-6">
                         <div>
@@ -113,7 +112,6 @@ export const ActivityLog = () => {
                         </div>
                     </div>
                 </div>
-
 
             </section>
 

@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from '../assets/logo.png'
 import { Formik, Form, Field, ErrorMessage } from "formik";   //to make use of formik to handle the form creation for the posts
 import * as Yup from 'yup';
 import { Link } from 'react-router-dom';
 
+
+import image from '../assets/ex5.png'
 
 
 export const Login = () => {
@@ -35,6 +37,13 @@ export const Login = () => {
             }
 
         }, 2000)
+    }
+
+
+
+    const [mode, setMode] = useState('original')
+    const changeMode = (value) => {
+        setMode(value)
     }
 
 
@@ -128,6 +137,17 @@ export const Login = () => {
                     </div>
                 </div>
             </main>
+
+            {/* <div className='space-x-4'>
+                <button onClick={() => changeMode('multiply')}>Multiply</button>
+                <button onClick={() => changeMode('color-dodge')}>color-dodge</button>
+                <button onClick={() => changeMode('darken')}>darken</button>
+                <button onClick={() => changeMode('overlay')}>Overlay</button>
+            </div>
+
+            <div className='bg-yellow-300'>
+                <img src={image} alt="img" className={`object-cover w-full mix-blend-${mode}`} />
+            </div> */}
         </>
     )
 }

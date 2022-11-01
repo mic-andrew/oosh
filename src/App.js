@@ -21,6 +21,7 @@ import { Pages } from './views/pages/pages';
 import { Explore } from './views/explore/explore';
 import { Technology } from './views/explore/technology';
 import { Events } from './views/explore/events';
+import { CreateStory } from './views/dashboard/storyCreate/createStory';
 
 
 
@@ -40,7 +41,6 @@ function App() {
               <Route path="forgot-password" element={<ForgotPassword />}></Route>
               <Route path="check-mail" element={<CheckEmail />}></Route>
 
-
               <Route path="/dashboard" element={<DashHeader />}>
                 <Route index element={<Dashboard />}></Route>
                 <Route path="notification" element={<Notification />}></Route>
@@ -54,6 +54,7 @@ function App() {
                 <Route path="explore" element={<Explore />}></Route>
                 <Route path="Technology" element={<Technology />}></Route>
                 <Route path="events" element={<Events />}></Route>
+                <Route path='create-story' element={<CreateStory />}></Route>
               </Route>
 
               <Route path="*" element={<Errorpage />}></Route>
@@ -74,6 +75,7 @@ function App() {
                 <Route path="message" element={<MessageHome />}>
                   <Route index element={<ChatSection />}></Route>
                 </Route>
+                <Route path='create-story' element={<CreateStory />}></Route>
                 <Route path='profile' element={<Profile />}></Route>
                 <Route path="settings" element={<Settings />}></Route>
                 <Route path="group" element={<Group />}></Route>
